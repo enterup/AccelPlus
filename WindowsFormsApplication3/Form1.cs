@@ -32,6 +32,7 @@ namespace WindowsFormsApplication3
         private int counterY = 0;
         private int counterZ = 0;
         private int startCounter = 0;
+        private int numberOfPoints = 0;
         private double xsum = 0;
         private double xmid = 0;
         private double ysum = 0;
@@ -52,7 +53,7 @@ namespace WindowsFormsApplication3
         private ProgramSetting configuration;
         public MainForm()
         {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
+          Thread.CurrentThread.CurrentUICulture = CultureInfo.CurrentCulture;
             InitializeComponent();
             //Load configuration from settings.xml file
             configuration = new ProgramSetting();
@@ -102,6 +103,14 @@ namespace WindowsFormsApplication3
                     {
                         flexBox.Text = configuration.FlexInerval;
                     }
+                if(configuration.countPoint != "0")
+                {
+                    numberOfPoints = Convert.ToInt32(configuration.countPoint);
+                }
+                else
+                {
+                    numberOfPoints = 300;
+                }
                 }
             }
             catch(System.IO.FileNotFoundException e)
@@ -151,6 +160,7 @@ namespace WindowsFormsApplication3
             configuration.minDz = dzMaskedBox.Text;
             configuration.Timer = timerTextBox.Text;
             configuration.FlexInerval = flexBox.Text;
+            configuration.countPoint = numberOfPoints.ToString();
             try {
                 using (System.IO.Stream writer = new FileStream("settings.xml", FileMode.Create))
                 {
@@ -352,7 +362,7 @@ namespace WindowsFormsApplication3
                     zsum = (zsum + fz);
                     zmid = zsum / counterXY;
                     this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { fx, fy, fz, counterXY, DateTime.Now, startCounter }, false);
-                    if(counterX == 300)
+                    if (counterX == numberOfPoints)
                     {
                         this.chartX.Series.RemoveAt(chartX.Series.Count-1);
                         chartX.Series.Add(stc);
@@ -382,13 +392,13 @@ namespace WindowsFormsApplication3
                     this.chartZ.Series[stc].Points.AddXY(counterZ, fz);
                     this.chartX.Series["SeriesXMid"].Points.Clear();
                     this.chartX.Series["SeriesXMid"].Points.AddXY(0, xmid);
-                    this.chartX.Series["SeriesXMid"].Points.AddXY(300, xmid);
+                    this.chartX.Series["SeriesXMid"].Points.AddXY(numberOfPoints, xmid);
                     this.chartY.Series["SeriesYMid"].Points.Clear();
                     this.chartY.Series["SeriesYMid"].Points.AddXY(0, ymid);
-                    this.chartY.Series["SeriesYMid"].Points.AddXY(300, ymid);
+                    this.chartY.Series["SeriesYMid"].Points.AddXY(numberOfPoints, ymid);
                     this.chartZ.Series["SeriesZMid"].Points.Clear();
                     this.chartZ.Series["SeriesZMid"].Points.AddXY(0, zmid);
-                    this.chartZ.Series["SeriesZMid"].Points.AddXY(300, zmid);
+                    this.chartZ.Series["SeriesZMid"].Points.AddXY(numberOfPoints, zmid);
                     this.chartX.Update();
                     this.chartY.Update();
                     this.chartZ.Update();
@@ -546,31 +556,31 @@ namespace WindowsFormsApplication3
 
                 }
                 this.chartX.Series["SeriesXMax"].Points.AddXY(0, maxX);
-                this.chartX.Series["SeriesXMax"].Points.AddXY(300, maxX);
+                this.chartX.Series["SeriesXMax"].Points.AddXY(numberOfPoints, maxX);
                 this.chartX.Series["SeriesXMin"].Points.AddXY(0, minX);
-                this.chartX.Series["SeriesXMin"].Points.AddXY(300, minX);
+                this.chartX.Series["SeriesXMin"].Points.AddXY(numberOfPoints, minX);
                 this.chartX.Series["SeriesXMid"].Points.AddXY(0, xmid);
-                this.chartX.Series["SeriesXMid"].Points.AddXY(300, xmid);
+                this.chartX.Series["SeriesXMid"].Points.AddXY(numberOfPoints, xmid);
                 this.chartX.ChartAreas[0].AxisY.Maximum = maxX + 0.1;
                 this.chartX.ChartAreas[0].AxisY.Minimum = minX - 0.1;
                 this.chartX.ChartAreas[0].AxisY.MaximumAutoSize = 8;
 
                 this.chartY.Series["SeriesYMax"].Points.AddXY(0, maxY);
-                this.chartY.Series["SeriesYMax"].Points.AddXY(300, maxY);
+                this.chartY.Series["SeriesYMax"].Points.AddXY(numberOfPoints, maxY);
                 this.chartY.Series["SeriesYMin"].Points.AddXY(0, minY);
-                this.chartY.Series["SeriesYMin"].Points.AddXY(300, minY);
+                this.chartY.Series["SeriesYMin"].Points.AddXY(numberOfPoints, minY);
                 this.chartY.Series["SeriesYMid"].Points.AddXY(0, ymid);
-                this.chartY.Series["SeriesYMid"].Points.AddXY(300, ymid);
+                this.chartY.Series["SeriesYMid"].Points.AddXY(numberOfPoints, ymid);
                 this.chartY.ChartAreas[0].AxisY.Maximum = maxY + 0.1;
                 this.chartY.ChartAreas[0].AxisY.Minimum = minY - 0.1;
                 this.chartY.ChartAreas[0].AxisY.MaximumAutoSize = 8;
 
                 this.chartZ.Series["SeriesZMax"].Points.AddXY(0, maxZ);
-                this.chartZ.Series["SeriesZMax"].Points.AddXY(300, maxZ);
+                this.chartZ.Series["SeriesZMax"].Points.AddXY(numberOfPoints, maxZ);
                 this.chartZ.Series["SeriesZMin"].Points.AddXY(0, minZ);
-                this.chartZ.Series["SeriesZMin"].Points.AddXY(300, minZ);
+                this.chartZ.Series["SeriesZMin"].Points.AddXY(numberOfPoints, minZ);
                 this.chartZ.Series["SeriesZMid"].Points.AddXY(0, zmid);
-                this.chartZ.Series["SeriesZMid"].Points.AddXY(300, zmid);
+                this.chartZ.Series["SeriesZMid"].Points.AddXY(numberOfPoints, zmid);
                 this.chartZ.ChartAreas[0].AxisY.Maximum = maxZ + 0.1;
                 this.chartZ.ChartAreas[0].AxisY.Minimum = minZ - 0.1;
                 this.chartZ.ChartAreas[0].AxisY.MaximumAutoSize = 8;

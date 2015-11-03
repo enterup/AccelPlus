@@ -355,7 +355,7 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGrid" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartX" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartY" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label9" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartZ" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartModZ" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModY" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModX" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,66.99396,Percent,33.00604" /&gt;&lt;Rows Styles="Absolute,20,Percent,93.38235,Percent,6.617647,Absolute,129,Absolute,16,Absolute,119,Absolute,19,Absolute,121" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGrid" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartX" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartY" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label9" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartZ" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartModZ" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModY" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModX" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,66,99396,Percent,33,00604" /&gt;&lt;Rows Styles="Absolute,20,Percent,93,38235,Percent,6,617647,Absolute,129,Absolute,16,Absolute,119,Absolute,19,Absolute,121" /&gt;&lt;/TableLayoutSettings&gt;</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -368,6 +368,9 @@
   </data>
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
+  </data>
+  <data name="MaxFlexZ.HeaderText" xml:space="preserve">
+    <value>Размах по скользящему среднему Z</value>
   </data>
   <data name="serialRadio.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -453,9 +456,6 @@
   <data name="timerTextBox.Mask" xml:space="preserve">
     <value>000</value>
   </data>
-  <data name="&gt;&gt;chartX.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
     <value>36, 99</value>
   </data>
@@ -518,6 +518,9 @@
   </data>
   <data name="portBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
+  </data>
+  <data name="&gt;&gt;chartModY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
   </data>
   <data name="stopButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -587,9 +590,6 @@
   </data>
   <data name="&gt;&gt;groupBox1.Type" xml:space="preserve">
     <value>System.Windows.Forms.GroupBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>29</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
     <value>menuStrip1</value>
@@ -1038,8 +1038,8 @@
   <data name="&gt;&gt;XValue.Name" xml:space="preserve">
     <value>XValue</value>
   </data>
-  <data name="&gt;&gt;flexBox.Type" xml:space="preserve">
-    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;chartX.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="label13.Text" xml:space="preserve">
     <value>Сглаживающий интервал</value>
@@ -1164,8 +1164,8 @@
   <data name="chartX.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
-  <data name="&gt;&gt;chartModY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  <data name="&gt;&gt;Time.Name" xml:space="preserve">
+    <value>Time</value>
   </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>6</value>
@@ -1287,8 +1287,8 @@
   <data name="serialRadio.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
   </data>
-  <data name="Serial.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+  <data name="&gt;&gt;clearButton.Parent" xml:space="preserve">
+    <value>groupBox1</value>
   </data>
   <data name="&gt;&gt;label10.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1314,8 +1314,8 @@
   <data name="label8.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 421</value>
   </data>
-  <data name="&gt;&gt;clearButton.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;flexBox.Type" xml:space="preserve">
+    <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;serialRadio.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -1458,17 +1458,17 @@
   <data name="stopButton.Text" xml:space="preserve">
     <value>Стоп</value>
   </data>
-  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>29</value>
   </data>
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
   </data>
-  <data name="MaxFlexZ.HeaderText" xml:space="preserve">
-    <value>Размах по скользящему среднему Z</value>
+  <data name="Serial.Width" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
-  <data name="&gt;&gt;Time.Name" xml:space="preserve">
-    <value>Time</value>
+  <data name="label12.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
