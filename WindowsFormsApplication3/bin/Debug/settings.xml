@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<ProgramSetting xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Timer>15</Timer>
+  <Interval>0</Interval>
+  <minDx>0.12</minDx>
+  <minDy>0.06</minDy>
+  <minDz>0.06</minDz>
+  <countPoint>0</countPoint>
+  <Source>UDP</Source>
+  <UDPPort>5555</UDPPort>
+  <COMPort />
+  <PortSpeed>0</PortSpeed>
+  <FlexInerval>03</FlexInerval>
+</ProgramSetting>
