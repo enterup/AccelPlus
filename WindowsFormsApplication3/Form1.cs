@@ -52,17 +52,15 @@ namespace WindowsFormsApplication3
         private ProgramSetting configuration;
         public MainForm()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo("ru");
             InitializeComponent();
+            //Load configuration from settings.xml file
             configuration = new ProgramSetting();
             try {
                 using (Stream stream = new FileStream("settings.xml", FileMode.Open))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(ProgramSetting));
-
-                    
-                    configuration = (ProgramSetting)serializer.Deserialize(stream);
-
-                    
+                     configuration = (ProgramSetting)serializer.Deserialize(stream);
                 if(configuration.Source == "UDP")
                     {
                         portBox.Text = configuration.UDPPort;
@@ -133,9 +131,10 @@ namespace WindowsFormsApplication3
         
           Close();
         }
-
+//Save last configuration to settings.xml file
         private void SaveSettings()
         {
+
             if (udpRadio.Checked)
             {
                 configuration.Source = "UDP";
@@ -152,10 +151,16 @@ namespace WindowsFormsApplication3
             configuration.minDz = dzMaskedBox.Text;
             configuration.Timer = timerTextBox.Text;
             configuration.FlexInerval = flexBox.Text;
-            using (System.IO.Stream writer = new FileStream("settings.xml", FileMode.Create))
+            try {
+                using (System.IO.Stream writer = new FileStream("settings.xml", FileMode.Create))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(ProgramSetting));
+                    serializer.Serialize(writer, configuration);
+                }
+            }
+            catch(Exception e)
             {
-                XmlSerializer serializer = new XmlSerializer(typeof(ProgramSetting));
-                serializer.Serialize(writer, configuration);
+
             }
         }
         private void Start()
@@ -824,6 +829,11 @@ namespace WindowsFormsApplication3
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
 
         }
