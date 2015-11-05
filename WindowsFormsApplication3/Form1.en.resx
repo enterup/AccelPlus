@@ -153,57 +153,30 @@
   <data name="MaxFlexZ.HeaderText" xml:space="preserve">
     <value>Z Peak To Peak for Moving Average</value>
   </data>
-  <data name="maxValue.HeaderText" xml:space="preserve">
-    <value>maxXValue</value>
-  </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="maxValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="minXValue.HeaderText" xml:space="preserve">
-    <value>minXValue</value>
-  </data>
   <data name="minXValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="midValue.HeaderText" xml:space="preserve">
-    <value>midXValue</value>
   </data>
   <data name="midValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="maxYValue.HeaderText" xml:space="preserve">
-    <value>maxYValue</value>
-  </data>
   <data name="maxYValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="minYValue.HeaderText" xml:space="preserve">
-    <value>minYValue</value>
   </data>
   <data name="minYValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="midYValue.HeaderText" xml:space="preserve">
-    <value>midYValue</value>
-  </data>
   <data name="midYValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="maxXValue.HeaderText" xml:space="preserve">
-    <value>maxXValue</value>
   </data>
   <data name="maxXValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
   </data>
-  <data name="minZValue.HeaderText" xml:space="preserve">
-    <value>minZValue</value>
-  </data>
   <data name="minZValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
-  </data>
-  <data name="midZValue.HeaderText" xml:space="preserve">
-    <value>midZValue</value>
   </data>
   <data name="midZValue.Visible" type="System.Boolean, mscorlib">
     <value>False</value>
