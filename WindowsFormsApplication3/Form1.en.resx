@@ -153,6 +153,61 @@
   <data name="MaxFlexZ.HeaderText" xml:space="preserve">
     <value>Z Peak To Peak for Moving Average</value>
   </data>
+  <data name="maxValue.HeaderText" xml:space="preserve">
+    <value>maxXValue</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="maxValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="minXValue.HeaderText" xml:space="preserve">
+    <value>minXValue</value>
+  </data>
+  <data name="minXValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="midValue.HeaderText" xml:space="preserve">
+    <value>midXValue</value>
+  </data>
+  <data name="midValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="maxYValue.HeaderText" xml:space="preserve">
+    <value>maxYValue</value>
+  </data>
+  <data name="maxYValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="minYValue.HeaderText" xml:space="preserve">
+    <value>minYValue</value>
+  </data>
+  <data name="minYValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="midYValue.HeaderText" xml:space="preserve">
+    <value>midYValue</value>
+  </data>
+  <data name="midYValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="maxXValue.HeaderText" xml:space="preserve">
+    <value>maxXValue</value>
+  </data>
+  <data name="maxXValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="minZValue.HeaderText" xml:space="preserve">
+    <value>minZValue</value>
+  </data>
+  <data name="minZValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="midZValue.HeaderText" xml:space="preserve">
+    <value>midZValue</value>
+  </data>
+  <data name="midZValue.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
   <data name="clearButton.Text" xml:space="preserve">
     <value>Clear Values</value>
   </data>
@@ -229,6 +284,30 @@
   <data name="label14.Text" xml:space="preserve">
     <value>Timer (s)</value>
   </data>
+  <data name="сохранитьКакXMLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="сохранитьКакXMLToolStripMenuItem.Text" xml:space="preserve">
+    <value>Save as XML</value>
+  </data>
+  <data name="загрузитьИзXMLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="загрузитьИзXMLToolStripMenuItem.Text" xml:space="preserve">
+    <value>Load from XML</value>
+  </data>
+  <data name="экспортВCSVToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>156, 22</value>
+  </data>
+  <data name="экспортВCSVToolStripMenuItem.Text" xml:space="preserve">
+    <value>Export to CSV</value>
+  </data>
+  <data name="файлToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>37, 20</value>
+  </data>
+  <data name="файлToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
   <data name="какПользоватьсяToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>134, 22</value>
   </data>
@@ -246,5 +325,14 @@
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Help</value>
+  </data>
+  <data name="saveAsXMLDialog.Filter" xml:space="preserve">
+    <value>XML|*.xml|All Files|*.*</value>
+  </data>
+  <data name="saveAsCSVDialog.Filter" xml:space="preserve">
+    <value>CSV File|*.csv</value>
+  </data>
+  <data name="openXMLDialog.Filter" xml:space="preserve">
+    <value>XML Files|*.xml</value>
   </data>
 </root>

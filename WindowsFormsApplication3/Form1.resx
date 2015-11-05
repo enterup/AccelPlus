@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="загрузитьИзXMLToolStripMenuItem.Text" xml:space="preserve">
+    <value>Загрузить из XML</value>
+  </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="label13.Size" type="System.Drawing.Size, System.Drawing">
     <value>173, 17</value>
@@ -136,6 +139,9 @@
   <data name="&gt;&gt;comPort.Type" xml:space="preserve">
     <value>System.IO.Ports.SerialPort, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="midValue.HeaderText" xml:space="preserve">
+    <value>midXValue</value>
+  </data>
   <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
     <value>8</value>
   </data>
@@ -154,6 +160,15 @@
   <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;loadDataFromXMLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="midZValue.HeaderText" xml:space="preserve">
+    <value>midZValue</value>
+  </data>
   <data name="&gt;&gt;chartX.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
@@ -161,14 +176,20 @@
   <data name="dataGrid.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
   </data>
+  <data name="&gt;&gt;midZValue.Name" xml:space="preserve">
+    <value>midZValue</value>
+  </data>
   <data name="&gt;&gt;dxMaskedBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;exportToCSVToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="groupBox1.Location" type="System.Drawing.Point, System.Drawing">
     <value>889, 23</value>
   </data>
-  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="загрузитьИзXMLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
   <data name="&gt;&gt;dataGrid.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -185,6 +206,9 @@
   </data>
   <data name="closeButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
+  </data>
+  <data name="&gt;&gt;YValue.Type" xml:space="preserve">
+    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label13.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
@@ -204,6 +228,9 @@
   <data name="dyMaskedBox.TabIndex" type="System.Int32, mscorlib">
     <value>24</value>
   </data>
+  <data name="&gt;&gt;loadDataFromXMLToolStripMenuItem.Name" xml:space="preserve">
+    <value>loadDataFromXMLToolStripMenuItem</value>
+  </data>
   <data name="&gt;&gt;XValue.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -212,6 +239,9 @@
   </data>
   <data name="dzMaskedBox.Text" xml:space="preserve">
     <value>006</value>
+  </data>
+  <data name="&gt;&gt;minZValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="startButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
@@ -240,6 +270,9 @@
   <data name="comBox.Items1" xml:space="preserve">
     <value>COM2</value>
   </data>
+  <data name="&gt;&gt;midYValue.Name" xml:space="preserve">
+    <value>midYValue</value>
+  </data>
   <data name="comBox.Items3" xml:space="preserve">
     <value>COM4</value>
   </data>
@@ -252,8 +285,8 @@
   <data name="comBox.Items4" xml:space="preserve">
     <value>COM5</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>128, 63</value>
+  <data name="startButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="label10.Size" type="System.Drawing.Size, System.Drawing">
     <value>94, 13</value>
@@ -276,6 +309,12 @@
   <data name="&gt;&gt;label4.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="udpRadio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;maxYValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>3, 0</value>
   </data>
@@ -288,6 +327,9 @@
   <data name="&gt;&gt;label5.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Порог для X</value>
+  </data>
   <data name="flexBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -299,6 +341,9 @@
   </data>
   <data name="&gt;&gt;Time.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
+    <value>7</value>
   </data>
   <data name="chartZ.Size" type="System.Drawing.Size, System.Drawing">
     <value>880, 116</value>
@@ -327,6 +372,9 @@
   <data name="&gt;&gt;label11.Name" xml:space="preserve">
     <value>label11</value>
   </data>
+  <data name="&gt;&gt;midValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;TimeValue.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -342,8 +390,8 @@
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1324, 722</value>
+  <data name="dxMaskedBox.Text" xml:space="preserve">
+    <value>012</value>
   </data>
   <data name="&gt;&gt;udpRadio.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -355,7 +403,10 @@
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="tableLayoutPanel1.LayoutSettings" type="System.Windows.Forms.TableLayoutSettings, System.Windows.Forms">
-    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGrid" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartX" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartY" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label9" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartZ" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartModZ" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModY" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModX" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,66,99396,Percent,33,00604" /&gt;&lt;Rows Styles="Absolute,20,Percent,93,38235,Percent,6,617647,Absolute,129,Absolute,16,Absolute,119,Absolute,19,Absolute,121" /&gt;&lt;/TableLayoutSettings&gt;</value>
+    <value>&lt;?xml version="1.0" encoding="utf-16"?&gt;&lt;TableLayoutSettings&gt;&lt;Controls&gt;&lt;Control Name="dataGrid" Row="1" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartX" Row="3" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartY" Row="5" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label7" Row="2" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label8" Row="4" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label12" Row="6" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label9" Row="6" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label11" Row="4" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="label6" Row="0" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="label10" Row="2" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartZ" Row="7" RowSpan="1" Column="0" ColumnSpan="1" /&gt;&lt;Control Name="chartModZ" Row="7" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModY" Row="5" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="chartModX" Row="3" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;Control Name="groupBox1" Row="1" RowSpan="1" Column="1" ColumnSpan="1" /&gt;&lt;/Controls&gt;&lt;Columns Styles="Percent,66.99396,Percent,33.00604" /&gt;&lt;Rows Styles="Absolute,20,Percent,93.38235,Percent,6.617647,Absolute,129,Absolute,16,Absolute,119,Absolute,19,Absolute,121" /&gt;&lt;/TableLayoutSettings&gt;</value>
+  </data>
+  <data name="&gt;&gt;minYValue.Name" xml:space="preserve">
+    <value>minYValue</value>
   </data>
   <data name="tableLayoutPanel1.TabIndex" type="System.Int32, mscorlib">
     <value>41</value>
@@ -369,11 +420,8 @@
   <data name="label1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="MaxFlexZ.HeaderText" xml:space="preserve">
-    <value>Размах по скользящему среднему Z</value>
-  </data>
-  <data name="serialRadio.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label10.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;closeButton.Name" xml:space="preserve">
     <value>closeButton</value>
@@ -383,9 +431,6 @@
   </data>
   <data name="closeButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>306, 177</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
   </data>
   <data name="label13.TabIndex" type="System.Int32, mscorlib">
     <value>37</value>
@@ -399,8 +444,8 @@
   <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
     <value>14</value>
   </data>
-  <data name="&gt;&gt;serialRadio.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
+    <value>backgroundWorker1</value>
   </data>
   <data name="&gt;&gt;portBox.ZOrder" xml:space="preserve">
     <value>15</value>
@@ -426,17 +471,11 @@
   <data name="tableLayoutPanel1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1324, 697</value>
   </data>
-  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
-  </data>
   <data name="&gt;&gt;ZModMax.Name" xml:space="preserve">
     <value>ZModMax</value>
   </data>
   <data name="&gt;&gt;serialRadio.ZOrder" xml:space="preserve">
     <value>7</value>
-  </data>
-  <data name="flexBox.TabIndex" type="System.Int32, mscorlib">
-    <value>36</value>
   </data>
   <data name="portBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>213, 24</value>
@@ -462,6 +501,9 @@
   <data name="&gt;&gt;stopButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;dyMaskedBox.Name" xml:space="preserve">
     <value>dyMaskedBox</value>
   </data>
@@ -477,8 +519,8 @@
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="dzMaskedBox.TabIndex" type="System.Int32, mscorlib">
-    <value>25</value>
+  <data name="loadDataFromXMLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
   </data>
   <data name="&gt;&gt;closeButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -504,14 +546,14 @@
   <data name="tableLayoutPanel1.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 556</value>
+  <data name="chartModZ.Location" type="System.Drawing.Point, System.Drawing">
+    <value>889, 578</value>
   </data>
   <data name="&gt;&gt;startButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="udpRadio.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;openXMLDialog.Name" xml:space="preserve">
+    <value>openXMLDialog</value>
   </data>
   <data name="&gt;&gt;chartModY.Name" xml:space="preserve">
     <value>chartModY</value>
@@ -519,20 +561,23 @@
   <data name="portBox.RightToLeft" type="System.Windows.Forms.RightToLeft, System.Windows.Forms">
     <value>Yes</value>
   </data>
-  <data name="&gt;&gt;chartModY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
+  <data name="&gt;&gt;maxXValue.Name" xml:space="preserve">
+    <value>maxXValue</value>
   </data>
   <data name="stopButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>75, 23</value>
   </data>
-  <data name="udpRadio.TabIndex" type="System.Int32, mscorlib">
-    <value>13</value>
+  <data name="сохранитьКакXMLToolStripMenuItem.Text" xml:space="preserve">
+    <value>Сохранить как XML</value>
   </data>
   <data name="boudRateBox.Items3" xml:space="preserve">
     <value>38400</value>
   </data>
   <data name="dxMaskedBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
+  </data>
+  <data name="&gt;&gt;maxYValue.Name" xml:space="preserve">
+    <value>maxYValue</value>
   </data>
   <data name="timerTextBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -546,8 +591,11 @@
   <data name="&gt;&gt;label12.Name" xml:space="preserve">
     <value>label12</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
+  <data name="оПрограммеToolStripMenuItem.Text" xml:space="preserve">
+    <value>О программе</value>
+  </data>
+  <data name="файлToolStripMenuItem.Text" xml:space="preserve">
+    <value>Файл</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Порог для Y</value>
@@ -555,8 +603,11 @@
   <data name="label8.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="&gt;&gt;оПрограммеToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
+    <value>889, 556</value>
+  </data>
+  <data name="minZValue.HeaderText" xml:space="preserve">
+    <value>minZValue</value>
   </data>
   <data name="&gt;&gt;label14.ZOrder" xml:space="preserve">
     <value>4</value>
@@ -606,8 +657,8 @@
   <data name="serialRadio.Text" xml:space="preserve">
     <value>Serial</value>
   </data>
-  <data name="udpRadio.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
+  <data name="&gt;&gt;label8.Name" xml:space="preserve">
+    <value>label8</value>
   </data>
   <data name="dzMaskedBox.Mask" xml:space="preserve">
     <value>0.00</value>
@@ -615,14 +666,17 @@
   <data name="&gt;&gt;label13.Name" xml:space="preserve">
     <value>label13</value>
   </data>
+  <data name="&gt;&gt;midValue.Name" xml:space="preserve">
+    <value>midValue</value>
+  </data>
   <data name="&gt;&gt;DataSetValues.Type" xml:space="preserve">
     <value>System.Data.DataSet, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="stopButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="comBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 23</value>
+  <data name="label9.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 556</value>
   </data>
   <data name="&gt;&gt;chartY.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
@@ -630,11 +684,14 @@
   <data name="boudRateBox.Items6" xml:space="preserve">
     <value>230400</value>
   </data>
+  <data name="comBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 23</value>
+  </data>
   <data name="Number.Width" type="System.Int32, mscorlib">
     <value>75</value>
   </data>
-  <data name="comBox.Items2" xml:space="preserve">
-    <value>COM3</value>
+  <data name="&gt;&gt;загрузитьИзXMLToolStripMenuItem.Name" xml:space="preserve">
+    <value>загрузитьИзXMLToolStripMenuItem</value>
   </data>
   <data name="label10.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -642,11 +699,11 @@
   <data name="label14.Location" type="System.Drawing.Point, System.Drawing">
     <value>36, 210</value>
   </data>
-  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
-    <value>94, 13</value>
+  <data name="&gt;&gt;groupBox1.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
-  <data name="какПользоватьсяToolStripMenuItem.Text" xml:space="preserve">
-    <value>Как пользоваться</value>
+  <data name="&gt;&gt;saveAsXMLDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="helpToolStripMenuItem.Text" xml:space="preserve">
     <value>Справка</value>
@@ -657,11 +714,20 @@
   <data name="&gt;&gt;Serial.Name" xml:space="preserve">
     <value>Serial</value>
   </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>groupBox1</value>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="chartModZ.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
   </data>
   <data name="label7.TabIndex" type="System.Int32, mscorlib">
     <value>30</value>
+  </data>
+  <data name="udpRadio.TabIndex" type="System.Int32, mscorlib">
+    <value>13</value>
+  </data>
+  <data name="minXValue.HeaderText" xml:space="preserve">
+    <value>minXValue</value>
   </data>
   <data name="&gt;&gt;label12.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -681,8 +747,11 @@
   <data name="&gt;&gt;label10.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
-  <data name="comBox.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 21</value>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="&gt;&gt;maxValue.Name" xml:space="preserve">
+    <value>maxValue</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>Port:</value>
@@ -693,8 +762,8 @@
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
     <value>182, 13</value>
   </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="&gt;&gt;YModMax.Name" xml:space="preserve">
     <value>YModMax</value>
@@ -717,8 +786,11 @@
   <data name="clearButton.Location" type="System.Drawing.Point, System.Drawing">
     <value>286, 111</value>
   </data>
-  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="сохранитьКакXMLToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;startNumber.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -735,6 +807,9 @@
   <data name="label5.Text" xml:space="preserve">
     <value>Порог для Z</value>
   </data>
+  <data name="maxXValue.HeaderText" xml:space="preserve">
+    <value>maxXValue</value>
+  </data>
   <data name="&gt;&gt;flexBox.Name" xml:space="preserve">
     <value>flexBox</value>
   </data>
@@ -743,9 +818,6 @@
   </data>
   <data name="tableLayoutPanel1.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Bottom, Left, Right</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>36, 127</value>
   </data>
   <data name="chartModX.Location" type="System.Drawing.Point, System.Drawing">
     <value>889, 295</value>
@@ -777,8 +849,14 @@
   <data name="label3.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
-  <data name="dxMaskedBox.Location" type="System.Drawing.Point, System.Drawing">
-    <value>213, 99</value>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1324, 722</value>
+  </data>
+  <data name="&gt;&gt;minXValue.Name" xml:space="preserve">
+    <value>minXValue</value>
   </data>
   <data name="какПользоватьсяToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>170, 22</value>
@@ -801,17 +879,23 @@
   <data name="dyMaskedBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 20</value>
   </data>
+  <data name="udpRadio.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
+  </data>
   <data name="&gt;&gt;ZModMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;dzMaskedBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;label11.ZOrder" xml:space="preserve">
-    <value>7</value>
+  <data name="dzMaskedBox.TabIndex" type="System.Int32, mscorlib">
+    <value>25</value>
   </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>Порог для X</value>
+  <data name="&gt;&gt;MaxFlexY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>Boud  Rate</value>
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Name" xml:space="preserve">
     <value>tableLayoutPanel1</value>
@@ -822,9 +906,6 @@
   <data name="&gt;&gt;udpRadio.Name" xml:space="preserve">
     <value>udpRadio</value>
   </data>
-  <data name="&gt;&gt;label8.Name" xml:space="preserve">
-    <value>label8</value>
-  </data>
   <data name="XModMax.HeaderText" xml:space="preserve">
     <value>Размах по X</value>
   </data>
@@ -834,14 +915,17 @@
   <data name="dxMaskedBox.Mask" xml:space="preserve">
     <value>0.00</value>
   </data>
+  <data name="exportToCSVToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
+  <data name="&gt;&gt;saveToolStripMenuItem.Name" xml:space="preserve">
+    <value>saveToolStripMenuItem</value>
+  </data>
   <data name="&gt;&gt;helpToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;MaxFlexZ.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label12.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 556</value>
   </data>
   <data name="ZModMax.Width" type="System.Int32, mscorlib">
     <value>70</value>
@@ -852,8 +936,8 @@
   <data name="portBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
-  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;оПрограммеToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;closeButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -873,20 +957,29 @@
   <data name="boudRateBox.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
+  <data name="&gt;&gt;exportToCSVToolStripMenuItem.Name" xml:space="preserve">
+    <value>exportToCSVToolStripMenuItem</value>
+  </data>
   <data name="label14.TabIndex" type="System.Int32, mscorlib">
     <value>38</value>
   </data>
   <data name="&gt;&gt;flexBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>36, 127</value>
   </data>
   <data name="label8.TabIndex" type="System.Int32, mscorlib">
     <value>31</value>
   </data>
   <data name="&gt;&gt;timer.Type" xml:space="preserve">
     <value>System.Windows.Forms.Timer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;minXValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label4.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
@@ -902,6 +995,9 @@
   </data>
   <data name="helpToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>65, 20</value>
+  </data>
+  <data name="&gt;&gt;openXMLDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label9.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -921,8 +1017,8 @@
   <data name="chartModY.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
   </data>
-  <data name="label14.Text" xml:space="preserve">
-    <value>Таймер (сек.)</value>
+  <data name="Serial.Width" type="System.Int32, mscorlib">
+    <value>60</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
     <value>128, 27</value>
@@ -930,8 +1026,11 @@
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1324, 24</value>
   </data>
-  <data name="&gt;&gt;chartModX.Parent" xml:space="preserve">
-    <value>tableLayoutPanel1</value>
+  <data name="&gt;&gt;файлToolStripMenuItem.Name" xml:space="preserve">
+    <value>файлToolStripMenuItem</value>
+  </data>
+  <data name="экспортВCSVToolStripMenuItem.Text" xml:space="preserve">
+    <value>Экспорт в CSV</value>
   </data>
   <data name="&gt;&gt;dxMaskedBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -945,9 +1044,6 @@
   <data name="&gt;&gt;XModMax.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;MaxFlexY.Type" xml:space="preserve">
-    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="&gt;&gt;tableLayoutPanel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
@@ -956,6 +1052,12 @@
   </data>
   <data name="dataGrid.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
+  </data>
+  <data name="&gt;&gt;saveAsXMLDialog.Name" xml:space="preserve">
+    <value>saveAsXMLDialog</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>128, 63</value>
   </data>
   <data name="&gt;&gt;YValue.Name" xml:space="preserve">
     <value>YValue</value>
@@ -975,11 +1077,17 @@
   <data name="&gt;&gt;label2.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="&gt;&gt;экспортВCSVToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="tableLayoutPanel1.ColumnCount" type="System.Int32, mscorlib">
     <value>2</value>
   </data>
-  <data name="chartY.Size" type="System.Drawing.Size, System.Drawing">
-    <value>880, 113</value>
+  <data name="&gt;&gt;saveAsCSVDialog.Type" xml:space="preserve">
+    <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="flexBox.TabIndex" type="System.Int32, mscorlib">
+    <value>36</value>
   </data>
   <data name="&gt;&gt;startButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
@@ -993,17 +1101,29 @@
   <data name="&gt;&gt;label13.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10.25pt</value>
+  </data>
+  <data name="label12.Size" type="System.Drawing.Size, System.Drawing">
+    <value>94, 13</value>
+  </data>
+  <data name="comBox.Items2" xml:space="preserve">
+    <value>COM3</value>
+  </data>
   <data name="portBox.Size" type="System.Drawing.Size, System.Drawing">
     <value>58, 20</value>
   </data>
   <data name="chartZ.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="minYValue.HeaderText" xml:space="preserve">
+    <value>minYValue</value>
+  </data>
   <data name="&gt;&gt;dyMaskedBox.ZOrder" xml:space="preserve">
     <value>18</value>
   </data>
-  <data name="&gt;&gt;YValue.Type" xml:space="preserve">
-    <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="label11.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="label13.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1014,14 +1134,20 @@
   <data name="timerTextBox.Text" xml:space="preserve">
     <value>10</value>
   </data>
+  <data name="saveToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>67, 22</value>
+  </data>
   <data name="boudRateBox.Items5" xml:space="preserve">
     <value>115200</value>
+  </data>
+  <data name="&gt;&gt;midZValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="closeButton.Text" xml:space="preserve">
     <value>Закрыть окно</value>
   </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;сохранитьКакXMLToolStripMenuItem.Name" xml:space="preserve">
+    <value>сохранитьКакXMLToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;label9.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1047,11 +1173,20 @@
   <data name="&gt;&gt;dyMaskedBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
+  <data name="&gt;&gt;файлToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="clearButton.Size" type="System.Drawing.Size, System.Drawing">
     <value>109, 45</value>
   </data>
   <data name="portBox.Text" xml:space="preserve">
     <value>5555</value>
+  </data>
+  <data name="maxValue.HeaderText" xml:space="preserve">
+    <value>maxXValue</value>
+  </data>
+  <data name="экспортВCSVToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 22</value>
   </data>
   <data name="&gt;&gt;Number.Name" xml:space="preserve">
     <value>Number</value>
@@ -1098,8 +1233,8 @@
   <data name="&gt;&gt;label7.Name" xml:space="preserve">
     <value>label7</value>
   </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>MainForm</value>
+  <data name="какПользоватьсяToolStripMenuItem.Text" xml:space="preserve">
+    <value>Как пользоваться</value>
   </data>
   <data name="clearButton.Text" xml:space="preserve">
     <value>Очистить значения</value>
@@ -1110,8 +1245,17 @@
   <data name="&gt;&gt;dataGrid.Parent" xml:space="preserve">
     <value>tableLayoutPanel1</value>
   </data>
+  <data name="&gt;&gt;midYValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="&gt;&gt;label7.ZOrder" xml:space="preserve">
     <value>3</value>
+  </data>
+  <data name="&gt;&gt;maxValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="файлToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>48, 20</value>
   </data>
   <data name="chartX.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -1128,11 +1272,14 @@
   <data name="&gt;&gt;ZValue.Type" xml:space="preserve">
     <value>System.Data.DataColumn, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="chartModZ.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="Time.HeaderText" xml:space="preserve">
     <value>Время</value>
+  </data>
+  <data name="&gt;&gt;chartModX.Parent" xml:space="preserve">
+    <value>tableLayoutPanel1</value>
   </data>
   <data name="tableLayoutPanel1.RowCount" type="System.Int32, mscorlib">
     <value>8</value>
@@ -1158,8 +1305,11 @@
   <data name="&gt;&gt;какПользоватьсяToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>Boud  Rate</value>
+  <data name="label14.Text" xml:space="preserve">
+    <value>Таймер (сек.)</value>
+  </data>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>12, 20</value>
   </data>
   <data name="chartX.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
@@ -1167,14 +1317,17 @@
   <data name="&gt;&gt;Time.Name" xml:space="preserve">
     <value>Time</value>
   </data>
+  <data name="label7.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
   <data name="&gt;&gt;label9.ZOrder" xml:space="preserve">
     <value>6</value>
   </data>
   <data name="&gt;&gt;comBox.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="chartModZ.Location" type="System.Drawing.Point, System.Drawing">
-    <value>889, 578</value>
+  <data name="&gt;&gt;chartModY.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataVisualization.Charting.Chart, System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35</value>
   </data>
   <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
     <value>17</value>
@@ -1187,6 +1340,9 @@
   </data>
   <data name="&gt;&gt;tableLayoutPanel1.Type" xml:space="preserve">
     <value>System.Windows.Forms.TableLayoutPanel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;maxXValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label10.Text" xml:space="preserve">
     <value>Размах  по оси X</value>
@@ -1203,8 +1359,8 @@
   <data name="&gt;&gt;AllValues.Name" xml:space="preserve">
     <value>AllValues</value>
   </data>
-  <data name="&gt;&gt;backgroundWorker1.Name" xml:space="preserve">
-    <value>backgroundWorker1</value>
+  <data name="groupBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
   </data>
   <data name="&gt;&gt;label6.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1212,14 +1368,8 @@
   <data name="&gt;&gt;udpRadio.ZOrder" xml:space="preserve">
     <value>5</value>
   </data>
-  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
-  </data>
   <data name="&gt;&gt;label4.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="startButton.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
-    <value>Top, Right</value>
   </data>
   <data name="comBox.Items6" xml:space="preserve">
     <value>COM7</value>
@@ -1233,11 +1383,17 @@
   <data name="timerTextBox.TabIndex" type="System.Int32, mscorlib">
     <value>39</value>
   </data>
+  <data name="&gt;&gt;minZValue.Name" xml:space="preserve">
+    <value>minZValue</value>
+  </data>
   <data name="&gt;&gt;boudRateBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;stopButton.Type" xml:space="preserve">
     <value>System.Windows.Forms.Button, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>MainForm</value>
   </data>
   <data name="dataGrid.Size" type="System.Drawing.Size, System.Drawing">
     <value>880, 248</value>
@@ -1245,8 +1401,8 @@
   <data name="label14.Font" type="System.Drawing.Font, System.Drawing">
     <value>Microsoft Sans Serif, 10.25pt</value>
   </data>
-  <data name="dxMaskedBox.Text" xml:space="preserve">
-    <value>012</value>
+  <data name="label3.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
+    <value>Top, Right</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>26</value>
@@ -1272,8 +1428,8 @@
   <data name="chartModX.TabIndex" type="System.Int32, mscorlib">
     <value>5</value>
   </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="serialRadio.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
   </data>
   <data name="&gt;&gt;comPort.Name" xml:space="preserve">
     <value>comPort</value>
@@ -1290,23 +1446,23 @@
   <data name="&gt;&gt;clearButton.Parent" xml:space="preserve">
     <value>groupBox1</value>
   </data>
-  <data name="&gt;&gt;label10.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="chartY.Size" type="System.Drawing.Size, System.Drawing">
+    <value>880, 113</value>
   </data>
   <data name="udpRadio.Text" xml:space="preserve">
     <value>UDP</value>
   </data>
-  <data name="label1.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10.25pt</value>
+  <data name="&gt;&gt;serialRadio.Type" xml:space="preserve">
+    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;label4.Name" xml:space="preserve">
     <value>label4</value>
   </data>
+  <data name="comBox.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 21</value>
+  </data>
   <data name="XModMax.Width" type="System.Int32, mscorlib">
     <value>70</value>
-  </data>
-  <data name="оПрограммеToolStripMenuItem.Text" xml:space="preserve">
-    <value>О программе</value>
   </data>
   <data name="timerTextBox.Location" type="System.Drawing.Point, System.Drawing">
     <value>213, 207</value>
@@ -1319,6 +1475,9 @@
   </data>
   <data name="&gt;&gt;serialRadio.Parent" xml:space="preserve">
     <value>groupBox1</value>
+  </data>
+  <data name="&gt;&gt;загрузитьИзXMLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;Number.Type" xml:space="preserve">
     <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1352,6 +1511,9 @@
   </data>
   <data name="&gt;&gt;timerTextBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.MaskedTextBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;экспортВCSVToolStripMenuItem.Name" xml:space="preserve">
+    <value>экспортВCSVToolStripMenuItem</value>
   </data>
   <data name="&gt;&gt;label3.Name" xml:space="preserve">
     <value>label3</value>
@@ -1395,11 +1557,20 @@
   <data name="boudRateBox.Items1" xml:space="preserve">
     <value>9600</value>
   </data>
+  <data name="&gt;&gt;saveAsCSVDialog.Name" xml:space="preserve">
+    <value>saveAsCSVDialog</value>
+  </data>
   <data name="chartModX.Text" xml:space="preserve">
     <value>X</value>
   </data>
   <data name="label12.Text" xml:space="preserve">
     <value>Размах  по оси Z</value>
+  </data>
+  <data name="midYValue.HeaderText" xml:space="preserve">
+    <value>midYValue</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
   </data>
   <data name="&gt;&gt;label3.Type" xml:space="preserve">
     <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -1412,6 +1583,9 @@
   </data>
   <data name="&gt;&gt;chartY.ZOrder" xml:space="preserve">
     <value>2</value>
+  </data>
+  <data name="&gt;&gt;сохранитьКакXMLToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="dxMaskedBox.TabIndex" type="System.Int32, mscorlib">
     <value>23</value>
@@ -1452,8 +1626,14 @@
   <data name="&gt;&gt;comBox.Type" xml:space="preserve">
     <value>System.Windows.Forms.ComboBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="maxYValue.HeaderText" xml:space="preserve">
+    <value>maxYValue</value>
+  </data>
   <data name="chartZ.Text" xml:space="preserve">
     <value>chart6</value>
+  </data>
+  <data name="dxMaskedBox.Location" type="System.Drawing.Point, System.Drawing">
+    <value>213, 99</value>
   </data>
   <data name="stopButton.Text" xml:space="preserve">
     <value>Стоп</value>
@@ -1464,8 +1644,11 @@
   <data name="&gt;&gt;label9.Name" xml:space="preserve">
     <value>label9</value>
   </data>
-  <data name="Serial.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+  <data name="MaxFlexZ.HeaderText" xml:space="preserve">
+    <value>Размах по скользящему среднему Z</value>
+  </data>
+  <data name="&gt;&gt;minYValue.Type" xml:space="preserve">
+    <value>System.Windows.Forms.DataGridViewTextBoxColumn, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="label12.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
@@ -1473,58 +1656,94 @@
   <data name="&gt;&gt;label14.Name" xml:space="preserve">
     <value>label14</value>
   </data>
-  <metadata name="DataSetValues.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>115, 17</value>
-  </metadata>
-  <metadata name="MaxFlexY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="midZValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
-  </metadata>
-  <metadata name="Serial.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>325, 17</value>
-  </metadata>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
   </metadata>
   <metadata name="MaxFlexZ.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>25</value>
-  </metadata>
-  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>440, 17</value>
-  </metadata>
-  <metadata name="YModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="XModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="MaxFlexX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="startNumber.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>False</value>
-  </metadata>
   <metadata name="Time.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>en</value>
+  </metadata>
+  <metadata name="maxYValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="YModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <metadata name="timer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>245, 17</value>
   </metadata>
-  <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <metadata name="Serial.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <metadata name="comPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="midYValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="maxXValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="openXMLDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>883, 14</value>
+  </metadata>
+  <metadata name="startNumber.GenerateMember" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="saveAsCSVDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>737, 14</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>129</value>
+  </metadata>
+  <metadata name="XModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
   </metadata>
   <metadata name="ZModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
+  </metadata>
+  <metadata name="minXValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="maxValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="midValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>325, 17</value>
+  </metadata>
+  <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="saveAsXMLDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>608, 15</value>
+  </metadata>
+  <metadata name="minZValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="backgroundWorker1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>440, 17</value>
+  </metadata>
+  <metadata name="MaxFlexY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="minYValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DataSetValues.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>115, 17</value>
+  </metadata>
+  <metadata name="comPort.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
   </metadata>
 </root>

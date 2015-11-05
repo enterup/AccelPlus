@@ -847,6 +847,258 @@ namespace WindowsFormsApplication3
         {
 
         }
+
+        private void LoadAllSeries()
+        {
+            //Clear all data
+            dataGrid.Rows.Clear();
+          //  DataSetValues.Clear();
+            this.chartX.Series["SeriesXMax"].Points.Clear();
+            this.chartX.Series["SeriesXMin"].Points.Clear();
+            this.chartX.Series["SeriesXMid"].Points.Clear();
+            this.chartY.Series["SeriesYMax"].Points.Clear();
+            this.chartY.Series["SeriesYMin"].Points.Clear();
+            this.chartY.Series["SeriesYMid"].Points.Clear();
+            this.chartZ.Series["SeriesZMax"].Points.Clear();
+            this.chartZ.Series["SeriesZMin"].Points.Clear();
+            this.chartZ.Series["SeriesZMid"].Points.Clear();
+
+            while (this.chartX.Series.Count != 3)
+            {
+                this.chartX.Series.RemoveAt(3);
+                this.chartY.Series.RemoveAt(3);
+                this.chartZ.Series.RemoveAt(3);
+            }
+            chartModX.Series["Series1"].Points.Clear();
+            chartModY.Series["Series1"].Points.Clear();
+            chartModZ.Series["Series1"].Points.Clear();
+            counter = 0;
+            startCounter = 0;
+            counterXY = 0;
+            xMaxModValue = -100;
+            yMaxModValue = -100;
+            zMaxModValue = -100;
+            
+            
+            // 
+
+            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], null, "startNumber", DataViewRowState.CurrentRows);
+            int maxSeries = Convert.ToInt32(custDV[custDV.Count-1][5]);
+            for (int i = 1; i <= maxSeries; i++)
+            {
+                calculateSeries(i);
+            }
+            // foreach (DataRowView catDRV in custDV)
+            //   {
+
+            //   }
+        }
+
+        private void calculateSeries(int seriesNumber)
+        {
+            float minX = 100;
+            float minY = 100;
+            float minZ = 100;
+            float maxX = -100;
+            float maxY = -100;
+            float maxZ = -100;
+            float sumx = 0;
+            float sumy = 0;
+            float sumz = 0;
+            int length = System.Convert.ToInt16(flexBox.Text);
+            String filter = "startNUmber=" + seriesNumber;
+            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
+            int counter = custDV.Count;
+            foreach (DataRowView catDRV in custDV)
+            {
+                float X = System.Convert.ToSingle(Convert.ToDouble(catDRV[0]));
+                float Y = System.Convert.ToSingle(Convert.ToDouble(catDRV[1]));
+                float Z = System.Convert.ToSingle(Convert.ToDouble(catDRV[2]));
+                sumx = sumx + X;
+                sumy = sumy + Y;
+                sumz = sumz + Z;
+                if (X > maxX)
+                { maxX = X; }
+                if (X < minX)
+                {
+                    minX = X;
+                }
+                if (Y > maxY)
+                { maxY = Y; }
+                if (Y < minY)
+                {
+                    minY = Y;
+                }
+                if (Z > maxZ)
+                { maxZ = Z; }
+                if (Z < minZ)
+                {
+                    minZ = Z;
+                }
+
+            }
+            float flexSumX = 0;
+            float flexSumY = 0;
+            float flexSumZ = 0;
+            float flexMidX = 0;
+            float flexMidY = 0;
+            float flexMidZ = 0;
+            float maxFlexMidX = -100;
+            float maxFlexMidY = -100;
+            float maxFlexMidZ = -100;
+            float minFlexMidX = 100;
+            float minFlexMidY = 100;
+            float minFlexMidZ = 100;
+            float divMinFlexMidX = 0;
+            float divMinFlexMidY = 0;
+            float divMinFlexMidZ = 0;
+            for (int i = 0; i < custDV.Count - length; i++)
+            {
+                for (int j = i; j < i + length; j++)
+                {
+                    flexSumX = System.Convert.ToSingle(Convert.ToDouble(custDV[j][0])) + flexSumX;
+                    flexSumY = System.Convert.ToSingle(Convert.ToDouble(custDV[j][1])) + flexSumY;
+                    flexSumZ = System.Convert.ToSingle(Convert.ToDouble(custDV[j][2])) + flexSumZ;
+                }
+                flexMidX = flexSumX / length;
+                flexMidY = flexSumY / length;
+                flexMidZ = flexSumZ / length;
+                if (flexMidX > maxFlexMidX)
+                {
+                    maxFlexMidX = flexMidX;
+                }
+                if (flexMidX < minFlexMidX)
+                {
+                    minFlexMidX = flexMidX;
+                }
+                if (flexMidY > maxFlexMidY)
+                {
+                    maxFlexMidY = flexMidY;
+                }
+                if (flexMidY < minFlexMidY)
+                {
+                    minFlexMidY = flexMidY;
+                }
+                if (flexMidZ > maxFlexMidZ)
+                {
+                    maxFlexMidZ = flexMidZ;
+                }
+                if (flexMidZ < minFlexMidZ)
+                {
+                    minFlexMidZ = flexMidZ;
+                }
+                flexSumX = 0;
+                flexSumY = 0;
+                flexSumZ = 0;
+            }
+
+            xMaxModValue = maxX - minX;
+            yMaxModValue = maxY - minY;
+            zMaxModValue = maxZ - minZ;
+            divMinFlexMidX = maxFlexMidX - minFlexMidX;
+            divMinFlexMidY = maxFlexMidY - minFlexMidY;
+            divMinFlexMidZ = maxFlexMidZ - minFlexMidZ;
+            xmid = sumx / counter;
+            ymid = sumy / counter;
+            zmid = sumz / counter;
+            stc = "Series" + seriesNumber.ToString();
+
+            String[] row = new String[18];
+            //row[0] = DateTime.Now.ToString();
+            row[0] = custDV[custDV.Count-1][4].ToString();
+            row[1] = stc;
+            row[2] = counter.ToString(); ;
+            row[3] = xMaxModValue.ToString();
+            row[4] = yMaxModValue.ToString();
+            row[5] = zMaxModValue.ToString();
+            row[6] = divMinFlexMidX.ToString();
+            row[7] = divMinFlexMidY.ToString();
+            row[8] = divMinFlexMidZ.ToString();
+            row[9] = maxX.ToString();
+            row[10] = minX.ToString();
+            row[11] = xmid.ToString();
+            row[12] = maxY.ToString();
+            row[13] = minY.ToString();
+            row[14] = ymid.ToString();
+            row[15] = maxZ.ToString();
+            row[16] = minZ.ToString();
+            row[17] = zmid.ToString();
+            dataGrid.Rows.Add(row);
+
+            xMaxModValue = -100;
+            yMaxModValue = -100;
+            zMaxModValue = -100;
+            maxFlexMidX = -100;
+            maxFlexMidY = -100;
+            maxFlexMidZ = -100;
+            minFlexMidX = 100;
+            minFlexMidY = 100;
+            minFlexMidZ = 100;
+
+            divMinFlexMidX = 0;
+            divMinFlexMidY = 0;
+            divMinFlexMidZ = 0;
+            flexMidX = 0;
+            flexMidY = 0;
+            flexMidZ = 0;
+
+            _isServerStarted = false;
+            counterXY = 0;
+            xmid = 0;
+            ymid = 0;
+            zmid = 0;
+            xsum = 0;
+            ysum = 0;
+            zsum = 0;
+
+            prevX = 0;
+            prevY = 0;
+            prevZ = 0;
+            counterX = 0;
+            counterY = 0;
+            counterZ = 0;
+
+        }
+
+
+        private void paintSeries(int SeriesNumber)
+        {
+            float minX = 100;
+            float minY = 100;
+            float minZ = 100;
+            float maxX = -100;
+            float maxY = -100;
+            float maxZ = -100;
+            int length = System.Convert.ToInt16(flexBox.Text);
+            String filter = "startNUmber=" + SeriesNumber;
+            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
+            foreach (DataRowView catDRV in custDV)
+            {
+
+            }
+        }
+
+        private void сохранитьКакXMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveAsXMLDialog.ShowDialog();
+        }
+
+        private void saveAsXMLDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            DataSetValues.WriteXml(saveAsXMLDialog.FileName);
+        }
+
+        private void загрузитьИзXMLToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            openXMLDialog.ShowDialog();
+        }
+
+        private void openXMLDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            DataSetValues.ReadXml(openXMLDialog.FileName);
+            LoadAllSeries();
+        }
+
     }
     public class ProgramSetting
     {
@@ -862,4 +1114,6 @@ namespace WindowsFormsApplication3
         public String PortSpeed = "";
         public String FlexInerval = "";
     }
+
+    
 }

@@ -2,11 +2,11 @@
 <ProgramSetting xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <Timer>10</Timer>
   <Interval>0</Interval>
-  <minDx>0,12</minDx>
-  <minDy>0,04</minDy>
-  <minDz>0,06</minDz>
+  <minDx>0.12</minDx>
+  <minDy>0.04</minDy>
+  <minDz>0.06</minDz>
   <countPoint>300</countPoint>
-  <Source>Serial</Source>
+  <Source>UDP</Source>
   <UDPPort>5555</UDPPort>
   <COMPort>COM3</COMPort>
   <PortSpeed>38400</PortSpeed>

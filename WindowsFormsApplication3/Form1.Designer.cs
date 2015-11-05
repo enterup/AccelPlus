@@ -62,15 +62,6 @@
             this.stopButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.YModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxFlexX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxFlexY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxFlexZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chartModX = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartModY = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartModZ = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -112,12 +103,37 @@
             this.timerTextBox = new System.Windows.Forms.MaskedTextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.сохранитьКакXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.загрузитьИзXMLToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.экспортВCSVToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.какПользоватьсяToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.оПрограммеToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.saveAsXMLDialog = new System.Windows.Forms.SaveFileDialog();
+            this.saveAsCSVDialog = new System.Windows.Forms.SaveFileDialog();
+            this.openXMLDialog = new System.Windows.Forms.OpenFileDialog();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Serial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxFlexX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxFlexY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxFlexZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minXValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxXValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minZValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midZValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
             startNumber = new System.Data.DataColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartModX)).BeginInit();
@@ -174,56 +190,19 @@
             this.ZModMax,
             this.MaxFlexX,
             this.MaxFlexY,
-            this.MaxFlexZ});
+            this.MaxFlexZ,
+            this.maxValue,
+            this.minXValue,
+            this.midValue,
+            this.maxYValue,
+            this.minYValue,
+            this.midYValue,
+            this.maxXValue,
+            this.minZValue,
+            this.midZValue});
             this.dataGrid.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Time
-            // 
-            this.Time.FillWeight = 150F;
-            resources.ApplyResources(this.Time, "Time");
-            this.Time.Name = "Time";
-            // 
-            // Serial
-            // 
-            resources.ApplyResources(this.Serial, "Serial");
-            this.Serial.Name = "Serial";
-            // 
-            // Number
-            // 
-            resources.ApplyResources(this.Number, "Number");
-            this.Number.Name = "Number";
-            // 
-            // XModMax
-            // 
-            resources.ApplyResources(this.XModMax, "XModMax");
-            this.XModMax.Name = "XModMax";
-            // 
-            // YModMax
-            // 
-            resources.ApplyResources(this.YModMax, "YModMax");
-            this.YModMax.Name = "YModMax";
-            // 
-            // ZModMax
-            // 
-            resources.ApplyResources(this.ZModMax, "ZModMax");
-            this.ZModMax.Name = "ZModMax";
-            // 
-            // MaxFlexX
-            // 
-            resources.ApplyResources(this.MaxFlexX, "MaxFlexX");
-            this.MaxFlexX.Name = "MaxFlexX";
-            // 
-            // MaxFlexY
-            // 
-            resources.ApplyResources(this.MaxFlexY, "MaxFlexY");
-            this.MaxFlexY.Name = "MaxFlexY";
-            // 
-            // MaxFlexZ
-            // 
-            resources.ApplyResources(this.MaxFlexZ, "MaxFlexZ");
-            this.MaxFlexZ.Name = "MaxFlexZ";
             // 
             // chartModX
             // 
@@ -605,9 +584,36 @@
             // 
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.файлToolStripMenuItem,
             this.helpToolStripMenuItem});
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // файлToolStripMenuItem
+            // 
+            resources.ApplyResources(this.файлToolStripMenuItem, "файлToolStripMenuItem");
+            this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.сохранитьКакXMLToolStripMenuItem,
+            this.загрузитьИзXMLToolStripMenuItem,
+            this.экспортВCSVToolStripMenuItem});
+            this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
+            // 
+            // сохранитьКакXMLToolStripMenuItem
+            // 
+            resources.ApplyResources(this.сохранитьКакXMLToolStripMenuItem, "сохранитьКакXMLToolStripMenuItem");
+            this.сохранитьКакXMLToolStripMenuItem.Name = "сохранитьКакXMLToolStripMenuItem";
+            this.сохранитьКакXMLToolStripMenuItem.Click += new System.EventHandler(this.сохранитьКакXMLToolStripMenuItem_Click);
+            // 
+            // загрузитьИзXMLToolStripMenuItem
+            // 
+            resources.ApplyResources(this.загрузитьИзXMLToolStripMenuItem, "загрузитьИзXMLToolStripMenuItem");
+            this.загрузитьИзXMLToolStripMenuItem.Name = "загрузитьИзXMLToolStripMenuItem";
+            this.загрузитьИзXMLToolStripMenuItem.Click += new System.EventHandler(this.загрузитьИзXMLToolStripMenuItem_Click);
+            // 
+            // экспортВCSVToolStripMenuItem
+            // 
+            resources.ApplyResources(this.экспортВCSVToolStripMenuItem, "экспортВCSVToolStripMenuItem");
+            this.экспортВCSVToolStripMenuItem.Name = "экспортВCSVToolStripMenuItem";
             // 
             // helpToolStripMenuItem
             // 
@@ -677,6 +683,113 @@
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.TabStop = false;
             this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // saveAsXMLDialog
+            // 
+            this.saveAsXMLDialog.DefaultExt = "*.xml";
+            resources.ApplyResources(this.saveAsXMLDialog, "saveAsXMLDialog");
+            this.saveAsXMLDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.saveAsXMLDialog_FileOk);
+            // 
+            // saveAsCSVDialog
+            // 
+            resources.ApplyResources(this.saveAsCSVDialog, "saveAsCSVDialog");
+            // 
+            // openXMLDialog
+            // 
+            this.openXMLDialog.DefaultExt = "*.xml";
+            resources.ApplyResources(this.openXMLDialog, "openXMLDialog");
+            this.openXMLDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openXMLDialog_FileOk);
+            // 
+            // Time
+            // 
+            this.Time.FillWeight = 150F;
+            resources.ApplyResources(this.Time, "Time");
+            this.Time.Name = "Time";
+            // 
+            // Serial
+            // 
+            resources.ApplyResources(this.Serial, "Serial");
+            this.Serial.Name = "Serial";
+            // 
+            // Number
+            // 
+            resources.ApplyResources(this.Number, "Number");
+            this.Number.Name = "Number";
+            // 
+            // XModMax
+            // 
+            resources.ApplyResources(this.XModMax, "XModMax");
+            this.XModMax.Name = "XModMax";
+            // 
+            // YModMax
+            // 
+            resources.ApplyResources(this.YModMax, "YModMax");
+            this.YModMax.Name = "YModMax";
+            // 
+            // ZModMax
+            // 
+            resources.ApplyResources(this.ZModMax, "ZModMax");
+            this.ZModMax.Name = "ZModMax";
+            // 
+            // MaxFlexX
+            // 
+            resources.ApplyResources(this.MaxFlexX, "MaxFlexX");
+            this.MaxFlexX.Name = "MaxFlexX";
+            // 
+            // MaxFlexY
+            // 
+            resources.ApplyResources(this.MaxFlexY, "MaxFlexY");
+            this.MaxFlexY.Name = "MaxFlexY";
+            // 
+            // MaxFlexZ
+            // 
+            resources.ApplyResources(this.MaxFlexZ, "MaxFlexZ");
+            this.MaxFlexZ.Name = "MaxFlexZ";
+            // 
+            // maxValue
+            // 
+            resources.ApplyResources(this.maxValue, "maxValue");
+            this.maxValue.Name = "maxValue";
+            // 
+            // minXValue
+            // 
+            resources.ApplyResources(this.minXValue, "minXValue");
+            this.minXValue.Name = "minXValue";
+            // 
+            // midValue
+            // 
+            resources.ApplyResources(this.midValue, "midValue");
+            this.midValue.Name = "midValue";
+            // 
+            // maxYValue
+            // 
+            resources.ApplyResources(this.maxYValue, "maxYValue");
+            this.maxYValue.Name = "maxYValue";
+            // 
+            // minYValue
+            // 
+            resources.ApplyResources(this.minYValue, "minYValue");
+            this.minYValue.Name = "minYValue";
+            // 
+            // midYValue
+            // 
+            resources.ApplyResources(this.midYValue, "midYValue");
+            this.midYValue.Name = "midYValue";
+            // 
+            // maxXValue
+            // 
+            resources.ApplyResources(this.maxXValue, "maxXValue");
+            this.maxXValue.Name = "maxXValue";
+            // 
+            // minZValue
+            // 
+            resources.ApplyResources(this.minZValue, "minZValue");
+            this.minZValue.Name = "minZValue";
+            // 
+            // midZValue
+            // 
+            resources.ApplyResources(this.midZValue, "midZValue");
+            this.midZValue.Name = "midZValue";
             // 
             // MainForm
             // 
@@ -761,6 +874,13 @@
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ToolStripMenuItem файлToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem сохранитьКакXMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem загрузитьИзXMLToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem экспортВCSVToolStripMenuItem;
+        private System.Windows.Forms.SaveFileDialog saveAsXMLDialog;
+        private System.Windows.Forms.SaveFileDialog saveAsCSVDialog;
+        private System.Windows.Forms.OpenFileDialog openXMLDialog;
         private System.Windows.Forms.DataGridViewTextBoxColumn Time;
         private System.Windows.Forms.DataGridViewTextBoxColumn Serial;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
@@ -770,6 +890,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn MaxFlexX;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaxFlexY;
         private System.Windows.Forms.DataGridViewTextBoxColumn MaxFlexZ;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minXValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxYValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minYValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midYValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn maxXValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn minZValue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn midZValue;
     }
 }
 
