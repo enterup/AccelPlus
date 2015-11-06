@@ -15,9 +15,10 @@ using System.IO;
 
 namespace WindowsFormsApplication3
 {
-   
+
     public partial class MainForm : Form
     {
+        // public void ToCSV(DataTable table);
         delegate void ShowMessageMethod(string msg);
         UdpClient _server = null;
         IPEndPoint _client = null;
@@ -51,18 +52,21 @@ namespace WindowsFormsApplication3
         static int origTimer = 0;
         private System.Windows.Forms.Timer timerNew;
         private ProgramSetting configuration;
+
         public MainForm()
         {
-          Thread.CurrentThread.CurrentUICulture = CultureInfo.CurrentCulture;
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CurrentCulture;
+            //CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator
             InitializeComponent();
             //Load configuration from settings.xml file
             configuration = new ProgramSetting();
-            try {
+            try
+            {
                 using (Stream stream = new FileStream("settings.xml", FileMode.Open))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(ProgramSetting));
-                     configuration = (ProgramSetting)serializer.Deserialize(stream);
-                if(configuration.Source == "UDP")
+                    configuration = (ProgramSetting)serializer.Deserialize(stream);
+                    if (configuration.Source == "UDP")
                     {
                         portBox.Text = configuration.UDPPort;
                         comBox.Hide();
@@ -70,7 +74,7 @@ namespace WindowsFormsApplication3
                         portBox.Show();
                         label3.Hide();
                     }
-                else
+                    else
                     {
                         comBox.Show();
                         boudRateBox.Show();
@@ -80,7 +84,7 @@ namespace WindowsFormsApplication3
                         boudRateBox.Text = configuration.PortSpeed;
                         comBox.Text = configuration.COMPort;
                     }
-                if(configuration.minDx!="")
+                    if (configuration.minDx != "")
                     {
                         dxMaskedBox.Text = configuration.minDx;
 
@@ -95,32 +99,32 @@ namespace WindowsFormsApplication3
                         dzMaskedBox.Text = configuration.minDz;
 
                     }
-                if(configuration.Timer != "")
+                    if (configuration.Timer != "")
                     {
                         timerTextBox.Text = configuration.Timer;
                     }
-                if(configuration.FlexInerval != "")
+                    if (configuration.FlexInerval != "")
                     {
                         flexBox.Text = configuration.FlexInerval;
                     }
-                if(configuration.countPoint != "0")
-                {
-                    numberOfPoints = Convert.ToInt32(configuration.countPoint);
-                }
-                else
-                {
-                    numberOfPoints = 300;
-                }
+                    if (configuration.countPoint != "0")
+                    {
+                        numberOfPoints = Convert.ToInt32(configuration.countPoint);
+                    }
+                    else
+                    {
+                        numberOfPoints = 300;
+                    }
                 }
             }
-            catch(System.IO.FileNotFoundException e)
+            catch (System.IO.FileNotFoundException e)
             {
                 comBox.Hide();
                 boudRateBox.Hide();
                 portBox.Show();
                 label3.Hide();
                 boudRateBox.Text = "38400";
-                comBox.Text = "COM3";  
+                comBox.Text = "COM3";
             }
         }
 
@@ -137,10 +141,10 @@ namespace WindowsFormsApplication3
         private void closeButton_Click(object sender, EventArgs e)
         {
 
-        
-          Close();
+
+            Close();
         }
-//Save last configuration to settings.xml file
+        //Save last configuration to settings.xml file
         private void SaveSettings()
         {
 
@@ -161,14 +165,15 @@ namespace WindowsFormsApplication3
             configuration.Timer = timerTextBox.Text;
             configuration.FlexInerval = flexBox.Text;
             configuration.countPoint = numberOfPoints.ToString();
-            try {
+            try
+            {
                 using (System.IO.Stream writer = new FileStream("settings.xml", FileMode.Create))
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(ProgramSetting));
                     serializer.Serialize(writer, configuration);
                 }
             }
-            catch(Exception e)
+            catch (Exception e)
             {
 
             }
@@ -295,26 +300,14 @@ namespace WindowsFormsApplication3
                         float fz;
                         if (float.TryParse(words[2], System.Globalization.NumberStyles.Any, new CultureInfo("en-US"), out fx) & float.TryParse(words[3], System.Globalization.NumberStyles.Any, new CultureInfo("en-US"), out fy) & float.TryParse(words[4], System.Globalization.NumberStyles.Any, new CultureInfo("en-US"), out fz))
                         {
-                            //if (xMaxModValue < Math.Abs(fx))
-                            //{
-                            //    xMaxModValue = Math.Abs(fx);
-                            //}
-
-                            //if (yMaxModValue < Math.Abs(fy))
-                            //{
-                            //    yMaxModValue = Math.Abs(fy);
-                            //}
-                            //if (zMaxModValue < Math.Abs(fz))
-                            //{
-                            //    zMaxModValue = Math.Abs(fz);
-                            //}
+                           
                             this.Invoke(action, new object[] { receivedMsg, fx, fy, fz, counter });
                         }
                         else
                         {
                             continue;
                         }
-                       
+
                     }
                 }
             }
@@ -364,7 +357,7 @@ namespace WindowsFormsApplication3
                     this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { fx, fy, fz, counterXY, DateTime.Now, startCounter }, false);
                     if (counterX == numberOfPoints)
                     {
-                        this.chartX.Series.RemoveAt(chartX.Series.Count-1);
+                        this.chartX.Series.RemoveAt(chartX.Series.Count - 1);
                         chartX.Series.Add(stc);
                         chartX.Series[stc].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
                         counterX = 0;
@@ -377,7 +370,7 @@ namespace WindowsFormsApplication3
                         chartZ.Series[stc].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
                         counterZ = 0;
                     }
-              
+
                     this.chartX.Series[stc].Points.AddXY(counterX, fx);
                     this.chartY.Series[stc].Points.AddXY(counterY, fy);
                     this.chartZ.Series[stc].Points.AddXY(counterZ, fz);
@@ -539,7 +532,8 @@ namespace WindowsFormsApplication3
                 this.chartZ.Series["SeriesZMax"].Points.Clear();
                 this.chartZ.Series["SeriesZMin"].Points.Clear();
                 this.chartZ.Series["SeriesZMid"].Points.Clear();
-                if (startCounter > 2)
+                if (this.chartX.Series.Count > 5)
+                //    if (startCounter > 2) 
                 {
                     this.chartX.Series.RemoveAt(3);
                     this.chartY.Series.RemoveAt(3);
@@ -599,42 +593,7 @@ namespace WindowsFormsApplication3
 
                 if (startCounter > 1)
                 {
-                    float f;
-                    String cellValue = dataGrid.Rows[startCounter - 2].Cells[3].Value.ToString();
-                    float.TryParse(cellValue, NumberStyles.Any, CultureInfo.CurrentCulture, out f);
-                    if (f > xMaxModValue)
-                    {
-                        dataGrid.Rows[startCounter - 1].Cells[3].Style.BackColor = Color.Green;
-
-                    }
-                    else
-                    {
-                        dataGrid.Rows[startCounter - 1].Cells[3].Style.BackColor = Color.OrangeRed;
-                    }
-
-                    cellValue = dataGrid.Rows[startCounter - 2].Cells[4].Value.ToString();
-                    float.TryParse(cellValue, NumberStyles.Any, CultureInfo.CurrentCulture, out f);
-                    if (f > yMaxModValue)
-                    {
-                        dataGrid.Rows[startCounter - 1].Cells[4].Style.BackColor = Color.Green;
-                    }
-                    else
-                    {
-                        dataGrid.Rows[startCounter - 1].Cells[4].Style.BackColor = Color.OrangeRed;
-                    }
-
-                    cellValue = dataGrid.Rows[startCounter - 2].Cells[5].Value.ToString();
-                    float.TryParse(cellValue, NumberStyles.Any, CultureInfo.CurrentCulture, out f);
-                    if (f > zMaxModValue)
-                    {
-                        dataGrid.Rows[startCounter - 1].Cells[5].Style.BackColor = Color.Green;
-                    }
-                    else
-                    {
-                        dataGrid.Rows[startCounter - 1].Cells[5].Style.BackColor = Color.OrangeRed;
-                    }
-
-
+                    colorsForGrid();
                 }
 
                 chartModX.Series["Series1"].Points.AddXY(DateTime.Now.ToString(), xMaxModValue);
@@ -676,6 +635,7 @@ namespace WindowsFormsApplication3
                 counterZ = 0;
                 timerNew.Stop();
                 timerTextBox.Text = origTimer.ToString();
+              
 
             }
         }
@@ -822,7 +782,7 @@ namespace WindowsFormsApplication3
                 int start = (int)e.Axis.ScaleView.ViewMinimum;
                 int end = (int)e.Axis.ScaleView.ViewMaximum;
 
-          
+
 
                 double[] temp = chartX.Series[0].Points.Where((x, i) => i >= start && i <= end).Select(x => x.YValues[0]).ToArray();
                 double ymin = temp.Min();
@@ -852,7 +812,6 @@ namespace WindowsFormsApplication3
         {
             //Clear all data
             dataGrid.Rows.Clear();
-          //  DataSetValues.Clear();
             this.chartX.Series["SeriesXMax"].Points.Clear();
             this.chartX.Series["SeriesXMin"].Points.Clear();
             this.chartX.Series["SeriesXMid"].Points.Clear();
@@ -878,12 +837,12 @@ namespace WindowsFormsApplication3
             xMaxModValue = -100;
             yMaxModValue = -100;
             zMaxModValue = -100;
-            
-            
+
+
             // 
 
             DataView custDV = new DataView(DataSetValues.Tables["AllValues"], null, "startNumber", DataViewRowState.CurrentRows);
-            int maxSeries = Convert.ToInt32(custDV[custDV.Count-1][5]);
+            int maxSeries = Convert.ToInt32(custDV[custDV.Count - 1][5]);
             startCounter = maxSeries;
             for (int i = 1; i <= maxSeries; i++)
             {
@@ -1003,7 +962,7 @@ namespace WindowsFormsApplication3
 
             String[] row = new String[18];
             //row[0] = DateTime.Now.ToString();
-            row[0] = custDV[custDV.Count-1][4].ToString();
+            row[0] = custDV[custDV.Count - 1][4].ToString();
             row[1] = stc;
             row[2] = counter.ToString(); ;
             row[3] = xMaxModValue.ToString();
@@ -1022,6 +981,10 @@ namespace WindowsFormsApplication3
             row[16] = minZ.ToString();
             row[17] = zmid.ToString();
             dataGrid.Rows.Add(row);
+
+            chartModX.Series["Series1"].Points.AddXY(DateTime.Now.ToString(), xMaxModValue);
+            chartModY.Series["Series1"].Points.AddXY(DateTime.Now.ToString(), yMaxModValue);
+            chartModZ.Series["Series1"].Points.AddXY(DateTime.Now.ToString(), zMaxModValue);
 
             xMaxModValue = -100;
             yMaxModValue = -100;
@@ -1058,6 +1021,45 @@ namespace WindowsFormsApplication3
 
         }
 
+        private void colorsForGrid()
+        {
+            float localMinX = 100;
+            int rowMinX = -1;
+            int rowMinY = -1;
+            int rowMinZ = -1;
+            float localMinY = 100;
+            float localMinZ = 100;
+
+            float f = 0;
+            String cellValue = "";
+            for(int i = 3; i<dataGrid.Columns.Count;i++)
+            {
+                for(int j=0;j<dataGrid.Rows.Count;j++)
+                {
+                    cellValue = dataGrid.Rows[j].Cells[i].Value.ToString();
+                    float.TryParse(cellValue, NumberStyles.Any, CultureInfo.CurrentCulture, out f);
+                    if (f < localMinX)
+                    {
+                        localMinX = f;
+                        if (rowMinX > -1)
+                        {
+                            dataGrid.Rows[rowMinX].Cells[i].Style.BackColor = Color.OrangeRed;
+                        }
+                        rowMinX = j;
+                        dataGrid.Rows[j].Cells[i].Style.BackColor = Color.Green;
+
+                    }
+                    else
+                    {
+                        dataGrid.Rows[j].Cells[i].Style.BackColor = Color.OrangeRed;
+                    }
+                }
+                localMinX = 100;
+                rowMinX = -1;
+            }
+          }
+
+
 
         private void paintSeries(int SeriesNumber)
         {
@@ -1068,7 +1070,7 @@ namespace WindowsFormsApplication3
             float maxY = -100;
             float maxZ = -100;
             int length = System.Convert.ToInt16(flexBox.Text);
-            
+
             String filter = "startNUmber=" + SeriesNumber;
             DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
             stc = "Series" + SeriesNumber.ToString();
@@ -1105,7 +1107,7 @@ namespace WindowsFormsApplication3
                     i++;
                 }
             }
-         
+
             float xmid = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[11].Value);
             float ymid = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[14].Value);
             float zmid = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[17].Value);
@@ -1130,6 +1132,16 @@ namespace WindowsFormsApplication3
             this.chartZ.Series["SeriesZMax"].Points.AddXY(custDV.Count, Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[15].Value));
             this.chartZ.Series["SeriesZMin"].Points.AddXY(0, Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[16].Value));
             this.chartZ.Series["SeriesZMin"].Points.AddXY(custDV.Count, Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[16].Value));
+            this.chartX.ChartAreas[0].AxisY.Maximum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[9].Value) + 0.1;
+            this.chartX.ChartAreas[0].AxisY.Minimum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[10].Value) - 0.1;
+            this.chartX.ChartAreas[0].AxisY.MaximumAutoSize = 8;
+
+            this.chartY.ChartAreas[0].AxisY.Maximum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[12].Value) + 0.1;
+            this.chartY.ChartAreas[0].AxisY.Minimum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[13].Value) - 0.1;
+            this.chartY.ChartAreas[0].AxisY.MaximumAutoSize = 8;
+            this.chartZ.ChartAreas[0].AxisY.Maximum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[15].Value) + 0.1;
+            this.chartZ.ChartAreas[0].AxisY.Minimum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[16].Value) - 0.1;
+            this.chartZ.ChartAreas[0].AxisY.MaximumAutoSize = 8;
             this.chartX.Update();
             this.chartY.Update();
             this.chartZ.Update();
@@ -1154,6 +1166,7 @@ namespace WindowsFormsApplication3
         {
             DataSetValues.ReadXml(openXMLDialog.FileName);
             LoadAllSeries();
+            colorsForGrid();
         }
 
         private void dataGrid_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -1180,6 +1193,49 @@ namespace WindowsFormsApplication3
             }
         }
 
+        private string ToCSV(DataTable table)
+        {
+            var result = new StringBuilder();
+            for (int i = 0; i < table.Columns.Count; i++)
+            {
+                result.Append(table.Columns[i].ColumnName);
+                result.Append(i == table.Columns.Count - 1 ? "\n" : ",");
+            }
+
+            foreach (DataRow row in table.Rows)
+            {
+                for (int i = 0; i < table.Columns.Count; i++)
+                {
+                    result.Append(row[i].ToString());
+                    result.Append(i == table.Columns.Count - 1 ? "\n" : ",");
+                }
+            }
+
+            return result.ToString();
+        }
+        private void экспортВCSVToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            saveAsCSVDialog.ShowDialog();
+        }
+
+        private void saveAsCSVDialog_FileOk(object sender, CancelEventArgs e)
+        {
+            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], null, "startNumber", DataViewRowState.CurrentRows);
+            string CSV;
+            if (custDV.Count > 0)
+            {
+                CSV = ToCSV(DataSetValues.Tables["AllValues"]);
+                try {
+                    File.WriteAllText(saveAsCSVDialog.FileName, CSV.ToString(), Encoding.Default);
+                }
+                catch(Exception e1)
+                {
+                    MessageBox.Show("Error write CSV file. "+ e1.ToString());
+                }
+            }
+            
+        }
+    
     }
     public class ProgramSetting
     {
