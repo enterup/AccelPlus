@@ -12,7 +12,7 @@ using System.Threading;
 using System.Globalization;
 using System.Xml.Serialization;
 using System.IO;
-
+using System.IO.Ports;
 namespace WindowsFormsApplication3
 {
 
@@ -56,8 +56,18 @@ namespace WindowsFormsApplication3
         public MainForm()
         {
             Thread.CurrentThread.CurrentUICulture = CultureInfo.CurrentCulture;
-            //CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator
+            String delimeter = CultureInfo.CurrentCulture.NumberFormat.CurrencyDecimalSeparator;
+            //String delMask = "0" + delimeter + "00";
+            String delMask = "0.00";
             InitializeComponent();
+            dxMaskedBox.Mask = delMask;
+            dyMaskedBox.Mask = delMask;
+            dzMaskedBox.Mask = delMask;
+           //  dxMaskedBox.Mask = "";
+            foreach (String st in SerialPort.GetPortNames())
+            {
+                comBox.Items.Add(st);
+            }
             //Load configuration from settings.xml file
             configuration = new ProgramSetting();
             try
@@ -86,17 +96,42 @@ namespace WindowsFormsApplication3
                     }
                     if (configuration.minDx != "")
                     {
-                        dxMaskedBox.Text = configuration.minDx;
+                        try
+                        {
+                            Double test = Convert.ToDouble(configuration.minDx);
+                            dxMaskedBox.Text = configuration.minDx;
+                        }
+                        catch(Exception e)
+                        {
+                            dxMaskedBox.Text = Convert.ToString(12.0 / 100.0);
+                        }
+                        
 
                     }
                     if (configuration.minDy != "")
                     {
-                        dyMaskedBox.Text = configuration.minDy;
+                        try
+                        {
+                            Double test = Convert.ToDouble(configuration.minDy);
+                            dyMaskedBox.Text = configuration.minDy;
+                        }
+                        catch (Exception e)
+                        {
+                            dyMaskedBox.Text = Convert.ToString(6.0 / 100.0);
+                        }
 
                     }
                     if (configuration.minDz != "")
                     {
-                        dzMaskedBox.Text = configuration.minDz;
+                        try
+                        {
+                            Double test = Convert.ToDouble(configuration.minDz);
+                            dzMaskedBox.Text = configuration.minDz;
+                        }
+                        catch (Exception e)
+                        {
+                            dzMaskedBox.Text = Convert.ToString(6.0 / 100.0);
+                        }
 
                     }
                     if (configuration.Timer != "")
@@ -125,6 +160,11 @@ namespace WindowsFormsApplication3
                 label3.Hide();
                 boudRateBox.Text = "38400";
                 comBox.Text = "COM3";
+                dxMaskedBox.Text = Convert.ToString(6.0 / 100.0);
+                dyMaskedBox.Text = Convert.ToString(6.0 / 100.0);
+                dzMaskedBox.Text = Convert.ToString(6.0 / 100.0);
+                numberOfPoints = 300;
+               
             }
         }
 
@@ -420,12 +460,12 @@ namespace WindowsFormsApplication3
         private void stopButton_Click(object sender, EventArgs e)
         {
             Stop();
-            if (_isServerStarted == true)
+            if (_isServerStarted == true && counterXY!=0)
             {
-                if (counterXY == 0)
-                {
-                    this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { 0, 0, 9.8, 1, DateTime.Now, startCounter }, false);
-                }
+               // if (counterXY != 0)
+                //{
+                 //   this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { 0, 0, 9.8, 1, DateTime.Now, startCounter }, false);
+               // }
                 float minX = 100;
                 float minY = 100;
                 float minZ = 100;
@@ -569,17 +609,17 @@ namespace WindowsFormsApplication3
                 this.chartZ.ChartAreas[0].AxisY.Maximum = maxZ + 0.1;
                 this.chartZ.ChartAreas[0].AxisY.Minimum = minZ - 0.1;
                 this.chartZ.ChartAreas[0].AxisY.MaximumAutoSize = 8;
-
+                
                 String[] row = new String[18];
                 row[0] = DateTime.Now.ToString();
                 row[1] = stc;
                 row[2] = counter.ToString(); ;
-                row[3] = xMaxModValue.ToString();
-                row[4] = yMaxModValue.ToString();
-                row[5] = zMaxModValue.ToString();
-                row[6] = divMinFlexMidX.ToString();
-                row[7] = divMinFlexMidY.ToString();
-                row[8] = divMinFlexMidZ.ToString();
+                row[3] =(Math.Round(xMaxModValue,3)*10).ToString();
+                row[4] = (Math.Round(yMaxModValue, 3) * 10).ToString();
+                row[5] = (Math.Round(zMaxModValue, 3) * 10).ToString();
+                row[6] = (Math.Round(divMinFlexMidX,3)*10).ToString();
+                row[7] = (Math.Round(divMinFlexMidY,3)*10).ToString();
+                row[8] = (Math.Round(divMinFlexMidZ, 3) * 10).ToString(); ;
                 row[9] = maxX.ToString();
                 row[10] = minX.ToString();
                 row[11] = xmid.ToString();
@@ -683,33 +723,36 @@ namespace WindowsFormsApplication3
 
         private void clearButton_Click(object sender, EventArgs e)
         {
-            dataGrid.Rows.Clear();
-            DataSetValues.Clear();
-            this.chartX.Series["SeriesXMax"].Points.Clear();
-            this.chartX.Series["SeriesXMin"].Points.Clear();
-            this.chartX.Series["SeriesXMid"].Points.Clear();
-            this.chartY.Series["SeriesYMax"].Points.Clear();
-            this.chartY.Series["SeriesYMin"].Points.Clear();
-            this.chartY.Series["SeriesYMid"].Points.Clear();
-            this.chartZ.Series["SeriesZMax"].Points.Clear();
-            this.chartZ.Series["SeriesZMin"].Points.Clear();
-            this.chartZ.Series["SeriesZMid"].Points.Clear();
-
-            while (this.chartX.Series.Count != 3)
+            if (!_isServerStarted)
             {
-                this.chartX.Series.RemoveAt(3);
-                this.chartY.Series.RemoveAt(3);
-                this.chartZ.Series.RemoveAt(3);
+                dataGrid.Rows.Clear();
+                DataSetValues.Clear();
+                this.chartX.Series["SeriesXMax"].Points.Clear();
+                this.chartX.Series["SeriesXMin"].Points.Clear();
+                this.chartX.Series["SeriesXMid"].Points.Clear();
+                this.chartY.Series["SeriesYMax"].Points.Clear();
+                this.chartY.Series["SeriesYMin"].Points.Clear();
+                this.chartY.Series["SeriesYMid"].Points.Clear();
+                this.chartZ.Series["SeriesZMax"].Points.Clear();
+                this.chartZ.Series["SeriesZMin"].Points.Clear();
+                this.chartZ.Series["SeriesZMid"].Points.Clear();
+
+                while (this.chartX.Series.Count != 3)
+                {
+                    this.chartX.Series.RemoveAt(3);
+                    this.chartY.Series.RemoveAt(3);
+                    this.chartZ.Series.RemoveAt(3);
+                }
+                chartModX.Series["Series1"].Points.Clear();
+                chartModY.Series["Series1"].Points.Clear();
+                chartModZ.Series["Series1"].Points.Clear();
+                counter = 0;
+                startCounter = 0;
+                counterXY = 0;
+                xMaxModValue = -100;
+                yMaxModValue = -100;
+                zMaxModValue = -100;
             }
-            chartModX.Series["Series1"].Points.Clear();
-            chartModY.Series["Series1"].Points.Clear();
-            chartModZ.Series["Series1"].Points.Clear();
-            counter = 0;
-            startCounter = 0;
-            counterXY = 0;
-            xMaxModValue = -100;
-            yMaxModValue = -100;
-            zMaxModValue = -100;
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -795,6 +838,10 @@ namespace WindowsFormsApplication3
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if(_isServerStarted)
+            {
+                stopButton_Click(sender, e);
+            }
             SaveSettings();
         }
 
@@ -1234,6 +1281,11 @@ namespace WindowsFormsApplication3
                 }
             }
             
+        }
+
+        private void comBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     
     }

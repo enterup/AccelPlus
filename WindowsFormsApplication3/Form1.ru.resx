@@ -117,41 +117,25 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="maxValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="dxMaskedBox.Mask" xml:space="preserve">
+    <value />
   </data>
-  <data name="minXValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="dxMaskedBox.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="midValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="dyMaskedBox.Mask" xml:space="preserve">
+    <value />
   </data>
-  <data name="maxYValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="dyMaskedBox.Text" xml:space="preserve">
+    <value />
   </data>
-  <data name="minYValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
+  <data name="dzMaskedBox.Mask" xml:space="preserve">
+    <value />
   </data>
-  <data name="midYValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="maxXValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="minZValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="midZValue.Visible" type="System.Boolean, mscorlib">
-    <value>False</value>
-  </data>
-  <data name="saveAsXMLDialog.Filter" xml:space="preserve">
-    <value>XML|*.xml|All Files|*.*</value>
+  <data name="dzMaskedBox.Text" xml:space="preserve">
+    <value />
   </data>
   <data name="saveAsCSVDialog.Filter" xml:space="preserve">
     <value>CSV|*.csv|AllFiles|*.*</value>
-  </data>
-  <data name="openXMLDialog.Filter" xml:space="preserve">
-    <value>XML|*.xml|All Files|*.*</value>
   </data>
 </root>
