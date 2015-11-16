@@ -81,3 +81,4 @@ C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\
 C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Help.ru.resources
 C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\ru-RU\WindowsFormsApplication3.resources.dll
 C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\ru\WindowsFormsApplication3.resources.dll
+C:\Users\Administrator\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
