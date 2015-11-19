@@ -13,6 +13,8 @@ using System.Globalization;
 using System.Xml.Serialization;
 using System.IO;
 using System.IO.Ports;
+using System.Windows.Forms.DataVisualization.Charting;
+
 namespace WindowsFormsApplication3
 {
 
@@ -63,7 +65,7 @@ namespace WindowsFormsApplication3
             dxMaskedBox.Mask = delMask;
             dyMaskedBox.Mask = delMask;
             dzMaskedBox.Mask = delMask;
-           //  dxMaskedBox.Mask = "";
+            //  dxMaskedBox.Mask = "";
             foreach (String st in SerialPort.GetPortNames())
             {
                 comBox.Items.Add(st);
@@ -101,11 +103,11 @@ namespace WindowsFormsApplication3
                             Double test = Convert.ToDouble(configuration.minDx);
                             dxMaskedBox.Text = configuration.minDx;
                         }
-                        catch(Exception e)
+                        catch (Exception e)
                         {
                             dxMaskedBox.Text = Convert.ToString(12.0 / 100.0);
                         }
-                        
+
 
                     }
                     if (configuration.minDy != "")
@@ -164,14 +166,14 @@ namespace WindowsFormsApplication3
                 dyMaskedBox.Text = Convert.ToString(6.0 / 100.0);
                 dzMaskedBox.Text = Convert.ToString(6.0 / 100.0);
                 numberOfPoints = 300;
-               
+
             }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             Start();
-          //  label15.Text = "Start!";
+            //  label15.Text = "Start!";
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -263,6 +265,58 @@ namespace WindowsFormsApplication3
                 timerNew.Interval = 1000;
                 timerNew.Start();
                 startCounter++;
+                //clear charts
+                chartX.Series.Clear();
+                chartY.Series.Clear();
+                chartZ.Series.Clear();
+                chartX.ChartAreas[0].AxisX.CustomLabels.Clear();
+                chartY.ChartAreas[0].AxisX.CustomLabels.Clear();
+                chartZ.ChartAreas[0].AxisX.CustomLabels.Clear();
+                chartX.ChartAreas[0].AxisX.ScaleView.Size = numberOfPoints;
+                chartY.ChartAreas[0].AxisX.ScaleView.Size = numberOfPoints;
+                chartZ.ChartAreas[0].AxisX.ScaleView.Size = numberOfPoints;
+                chartX.Series.Add("SeriesXMid");
+                chartX.Series["SeriesXMid"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartX.Series["SeriesXMid"].Color = Color.Fuchsia;
+                chartX.Series.Add("SeriesXMax");
+                chartX.Series["SeriesXMax"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartX.Series["SeriesXMax"].Color = Color.Red;
+                chartX.Series.Add("SeriesXMin");
+                chartX.Series["SeriesXMin"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartX.Series["SeriesXMin"].Color = Color.Red;
+                chartY.Series.Add("SeriesYMid");
+                chartY.Series["SeriesYMid"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartY.Series["SeriesYMid"].Color = Color.Fuchsia;
+                chartY.Series.Add("SeriesYMax");
+                chartY.Series["SeriesYMax"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartY.Series["SeriesYMax"].Color = Color.Red;
+                chartY.Series.Add("SeriesYMin");
+                chartY.Series["SeriesYMin"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartY.Series["SeriesYMin"].Color = Color.Red;
+
+                chartZ.Series.Add("SeriesZMid");
+                chartZ.Series["SeriesZMid"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartZ.Series["SeriesZMid"].Color = Color.Fuchsia;
+                chartZ.Series.Add("SeriesZMax");
+                chartZ.Series["SeriesZMax"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartZ.Series["SeriesZMax"].Color = Color.Red;
+                chartZ.Series.Add("SeriesZMin");
+                chartZ.Series["SeriesZMin"].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartZ.Series["SeriesZMin"].Color = Color.Red;
+
+                chartX.ChartAreas[0].AxisY.Maximum = Double.NaN;
+                chartX.ChartAreas[0].AxisY.Minimum = Double.NaN;
+                chartY.ChartAreas[0].AxisY.Maximum = Double.NaN;
+                chartY.ChartAreas[0].AxisY.Minimum = Double.NaN;
+                chartZ.ChartAreas[0].AxisY.Maximum = Double.NaN;
+                chartZ.ChartAreas[0].AxisY.Minimum = Double.NaN;
+                chartX.Titles.Clear();
+                chartY.Titles.Clear();
+                chartZ.Titles.Clear();
+                chartX.ChartAreas[0].Position.Auto = true;
+                chartY.ChartAreas[0].Position.Auto = true;
+                chartZ.ChartAreas[0].Position.Auto = true;
+                //stop clear
                 stc = "Series" + startCounter.ToString();
                 chartX.Series.Add(stc);
                 chartX.Series[stc].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
@@ -270,37 +324,45 @@ namespace WindowsFormsApplication3
                 chartY.Series[stc].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
                 chartZ.Series.Add(stc);
                 chartZ.Series[stc].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+                chartX.ChartAreas[0].AxisX.Title = "Points";
+                chartX.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+                chartY.ChartAreas[0].AxisX.Title = "Points";
+                chartY.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+                chartZ.ChartAreas[0].AxisX.Title = "Points";
+                chartZ.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
                 timerC = Int16.Parse(timerTextBox.Text);
+
+                //   chartZ.ChartAreas[0].RecalculateAxesScale();
                 origTimer = timerC;
                 // }
                 //Start listening.
                 //Thread 
-                
-                for(int i = 0;  i < 3; i++)
+
+                for (int i = 0; i < 3; i++)
                 {
-                try
-                {
-                    
-                    _listenThread = new Thread(new ThreadStart(Listening));
-                    _listenThread.Start();
-                    _isServerStarted = true;
-                 // label15.Text = "Thread is Started!";
-                }
-                //Change state to indicate the server starts.
-                catch(Exception e)
-                {
-                    MessageBox.Show("Error in run thread!" + e.Message);
-           //         label15.Text = "Error in run thread!" + e.Message;
-                }
-                if(_listenThread.IsAlive)
-                {
-                //    label15.Text = "Thread is Alive!";
-                    break;
-                }
-                else
-                {
-                    System.Threading.Thread.Sleep(30);
-                }
+                    try
+                    {
+
+                        _listenThread = new Thread(new ThreadStart(Listening));
+                        _listenThread.Start();
+                        _isServerStarted = true;
+                        // label15.Text = "Thread is Started!";
+                    }
+                    //Change state to indicate the server starts.
+                    catch (Exception e)
+                    {
+                        MessageBox.Show("Error in run thread!" + e.Message);
+                        //         label15.Text = "Error in run thread!" + e.Message;
+                    }
+                    if (_listenThread.IsAlive)
+                    {
+                        //    label15.Text = "Thread is Alive!";
+                        break;
+                    }
+                    else
+                    {
+                        System.Threading.Thread.Sleep(30);
+                    }
                 }
             }
         }
@@ -364,7 +426,7 @@ namespace WindowsFormsApplication3
                         float fz;
                         if (float.TryParse(words[2], System.Globalization.NumberStyles.Any, new CultureInfo("en-US"), out fx) & float.TryParse(words[3], System.Globalization.NumberStyles.Any, new CultureInfo("en-US"), out fy) & float.TryParse(words[4], System.Globalization.NumberStyles.Any, new CultureInfo("en-US"), out fz))
                         {
-                           
+
                             this.Invoke(action, new object[] { receivedMsg, fx, fy, fz, counter });
                         }
                         else
@@ -418,7 +480,7 @@ namespace WindowsFormsApplication3
                     ymid = ysum / counterXY;
                     zsum = (zsum + fz);
                     zmid = zsum / counterXY;
-                    this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { fx, fy, fz, counterXY, DateTime.Now, startCounter,stc }, false);
+                    this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { fx, fy, fz, counterXY, DateTime.Now, startCounter, stc }, false);
                     if (counterX == numberOfPoints)
                     {
                         this.chartX.Series.RemoveAt(chartX.Series.Count - 1);
@@ -447,9 +509,11 @@ namespace WindowsFormsApplication3
                     this.chartZ.Series["SeriesZMid"].Points.Clear();
                     this.chartZ.Series["SeriesZMid"].Points.AddXY(0, zmid);
                     this.chartZ.Series["SeriesZMid"].Points.AddXY(numberOfPoints, zmid);
+                    chartZ.ChartAreas[0].RecalculateAxesScale();
                     this.chartX.Update();
                     this.chartY.Update();
                     this.chartZ.Update();
+
                 }
             }
         }
@@ -477,8 +541,8 @@ namespace WindowsFormsApplication3
 
                 }
                 catch (ThreadStateException e)
-                { 
-                    SendMsg("Server stops. Error.", 0, 0, 0, 0); 
+                {
+                    SendMsg("Server stops. Error.", 0, 0, 0, 0);
                 }
             }
         }
@@ -486,12 +550,12 @@ namespace WindowsFormsApplication3
         private void stopButton_Click(object sender, EventArgs e)
         {
             Stop();
-            if (_isServerStarted == true && counterXY!=0)
+            if (_isServerStarted == true && counterXY != 0)
             {
-               // if (counterXY != 0)
+                // if (counterXY != 0)
                 //{
-                 //   this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { 0, 0, 9.8, 1, DateTime.Now, startCounter }, false);
-               // }
+                //   this.DataSetValues.Tables["AllValues"].LoadDataRow(new Object[] { 0, 0, 9.8, 1, DateTime.Now, startCounter }, false);
+                // }
                 float minX = 100;
                 float minY = 100;
                 float minZ = 100;
@@ -611,40 +675,40 @@ namespace WindowsFormsApplication3
                 this.chartX.Series["SeriesXMin"].Points.AddXY(0, minX);
                 this.chartX.Series["SeriesXMin"].Points.AddXY(numberOfPoints, minX);
                 this.chartX.Series["SeriesXMid"].Points.AddXY(0, xmid);
-                this.chartX.Series["SeriesXMid"].Points.AddXY(numberOfPoints, xmid); 
-            /*    this.chartX.ChartAreas[0].AxisY.Maximum = maxX + 0.1;
-                this.chartX.ChartAreas[0].AxisY.Minimum = minX - 0.1;
-                this.chartX.ChartAreas[0].AxisY.MaximumAutoSize = 8;
-              */  
+                this.chartX.Series["SeriesXMid"].Points.AddXY(numberOfPoints, xmid);
+                /*    this.chartX.ChartAreas[0].AxisY.Maximum = maxX + 0.1;
+                    this.chartX.ChartAreas[0].AxisY.Minimum = minX - 0.1;
+                    this.chartX.ChartAreas[0].AxisY.MaximumAutoSize = 8;
+                  */
                 this.chartY.Series["SeriesYMax"].Points.AddXY(0, maxY);
                 this.chartY.Series["SeriesYMax"].Points.AddXY(numberOfPoints, maxY);
                 this.chartY.Series["SeriesYMin"].Points.AddXY(0, minY);
                 this.chartY.Series["SeriesYMin"].Points.AddXY(numberOfPoints, minY);
                 this.chartY.Series["SeriesYMid"].Points.AddXY(0, ymid);
                 this.chartY.Series["SeriesYMid"].Points.AddXY(numberOfPoints, ymid);
-               /*  this.chartY.ChartAreas[0].AxisY.Maximum = maxY + 0.1;
-                this.chartY.ChartAreas[0].AxisY.Minimum = minY - 0.1;
-                this.chartY.ChartAreas[0].AxisY.MaximumAutoSize = 8;
-                */
+                /*  this.chartY.ChartAreas[0].AxisY.Maximum = maxY + 0.1;
+                 this.chartY.ChartAreas[0].AxisY.Minimum = minY - 0.1;
+                 this.chartY.ChartAreas[0].AxisY.MaximumAutoSize = 8;
+                 */
                 this.chartZ.Series["SeriesZMax"].Points.AddXY(0, maxZ);
                 this.chartZ.Series["SeriesZMax"].Points.AddXY(numberOfPoints, maxZ);
                 this.chartZ.Series["SeriesZMin"].Points.AddXY(0, minZ);
                 this.chartZ.Series["SeriesZMin"].Points.AddXY(numberOfPoints, minZ);
                 this.chartZ.Series["SeriesZMid"].Points.AddXY(0, zmid);
                 this.chartZ.Series["SeriesZMid"].Points.AddXY(numberOfPoints, zmid);
-            //    this.chartZ.ChartAreas[0].AxisY.Maximum = maxZ + 0.1;
-            //    this.chartZ.ChartAreas[0].AxisY.Minimum = minZ - 0.1;
-            //    this.chartZ.ChartAreas[0].AxisY.MaximumAutoSize = 8;
-                
+                //    this.chartZ.ChartAreas[0].AxisY.Maximum = maxZ + 0.1;
+                //    this.chartZ.ChartAreas[0].AxisY.Minimum = minZ - 0.1;
+                //    this.chartZ.ChartAreas[0].AxisY.MaximumAutoSize = 8;
+
                 String[] row = new String[18];
                 row[0] = DateTime.Now.ToString();
                 row[1] = stc;
                 row[2] = counter.ToString(); ;
-                row[3] =(Math.Round(xMaxModValue,3)*10).ToString();
+                row[3] = (Math.Round(xMaxModValue, 3) * 10).ToString();
                 row[4] = (Math.Round(yMaxModValue, 3) * 10).ToString();
                 row[5] = (Math.Round(zMaxModValue, 3) * 10).ToString();
-                row[6] = (Math.Round(divMinFlexMidX,3)*10).ToString();
-                row[7] = (Math.Round(divMinFlexMidY,3)*10).ToString();
+                row[6] = (Math.Round(divMinFlexMidX, 3) * 10).ToString();
+                row[7] = (Math.Round(divMinFlexMidY, 3) * 10).ToString();
                 row[8] = (Math.Round(divMinFlexMidZ, 3) * 10).ToString(); ;
                 row[9] = maxX.ToString();
                 row[10] = minX.ToString();
@@ -656,7 +720,7 @@ namespace WindowsFormsApplication3
                 row[16] = minZ.ToString();
                 row[17] = zmid.ToString();
                 dataGrid.Rows.Add(row);
-                dataGrid.Rows[dataGrid.Rows.Count-1].Selected = true;
+                dataGrid.Rows[dataGrid.Rows.Count - 1].Selected = true;
                 if (startCounter > 1)
                 {
                     colorsForGrid();
@@ -679,14 +743,14 @@ namespace WindowsFormsApplication3
                 flexMidX = 0;
                 flexMidY = 0;
                 flexMidZ = 0;
-              
-              
+
+
 
             }
             xMaxModValue = -100;
             yMaxModValue = -100;
             zMaxModValue = -100;
-       
+
 
 
             counterXY = 0;
@@ -706,7 +770,7 @@ namespace WindowsFormsApplication3
             timerNew.Stop();
             timerTextBox.Text = origTimer.ToString();
             _isServerStarted = false;
-          //  label15.Text = "Stop!";
+            //  label15.Text = "Stop!";
         }
         private void chart1_Click(object sender, EventArgs e)
         {
@@ -725,12 +789,7 @@ namespace WindowsFormsApplication3
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //comBox.Hide();
-            //boudRateBox.Hide();
-            //portBox.Show();
-            //label3.Hide();
-            //boudRateBox.Text = "38400";
-            //comBox.Text = "COM3";
+
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
@@ -817,7 +876,7 @@ namespace WindowsFormsApplication3
         private void TimerEventProcessor(Object myObject, EventArgs myEventArgs)
         {
 
-            if (timerC == 0)
+            if (timerC == 1)
             {
                 //label15.Text = "Stop by timer Event!";
                 stopButton_Click(myObject, myEventArgs);
@@ -828,7 +887,7 @@ namespace WindowsFormsApplication3
             {
                 timerTextBox.Text = timerC.ToString();
                 timerC = timerC - 1;
-            //    label15.Text = "Next tick!"+_listenThread.IsAlive.ToString();
+                //    label15.Text = "Next tick!"+_listenThread.IsAlive.ToString();
             }
 
         }
@@ -852,12 +911,12 @@ namespace WindowsFormsApplication3
 
         private void chartX_AxisViewChanged(object sender, System.Windows.Forms.DataVisualization.Charting.ViewEventArgs e)
         {
-        
+
         }
 
         private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(_isServerStarted)
+            if (_isServerStarted)
             {
                 stopButton_Click(sender, e);
             }
@@ -878,6 +937,7 @@ namespace WindowsFormsApplication3
         {
             //Clear all data
             dataGrid.Rows.Clear();
+
             this.chartX.Series["SeriesXMax"].Points.Clear();
             this.chartX.Series["SeriesXMin"].Points.Clear();
             this.chartX.Series["SeriesXMid"].Points.Clear();
@@ -1027,7 +1087,6 @@ namespace WindowsFormsApplication3
             stc = "Series" + seriesNumber.ToString();
 
             String[] row = new String[18];
-            //row[0] = DateTime.Now.ToString();
             row[0] = custDV[custDV.Count - 1][4].ToString();
             row[1] = stc;
             row[2] = counter.ToString(); ;
@@ -1098,9 +1157,9 @@ namespace WindowsFormsApplication3
 
             float f = 0;
             String cellValue = "";
-            for(int i = 3; i<dataGrid.Columns.Count;i++)
+            for (int i = 3; i < dataGrid.Columns.Count; i++)
             {
-                for(int j=0;j<dataGrid.Rows.Count;j++)
+                for (int j = 0; j < dataGrid.Rows.Count; j++)
                 {
                     if (dataGrid.Rows[j].Cells[i].Value != null)
                     {
@@ -1129,7 +1188,7 @@ namespace WindowsFormsApplication3
                 localMinX = 100;
                 rowMinX = -1;
             }
-          }
+        }
 
 
 
@@ -1141,20 +1200,53 @@ namespace WindowsFormsApplication3
             float maxX = -100;
             float maxY = -100;
             float maxZ = -100;
+            double pointTime = 0;
+            chartX.ChartAreas[0].AxisX.CustomLabels.Clear();
+            chartY.ChartAreas[0].AxisX.CustomLabels.Clear();
+            chartZ.ChartAreas[0].AxisX.CustomLabels.Clear();
+            chartX.ChartAreas[0].AxisX.Title = "Time(ss)";
+            chartX.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartY.ChartAreas[0].AxisX.Title = "Time(ss)";
+            chartY.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartZ.ChartAreas[0].AxisX.Title = "Time(ss)";
+            chartZ.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
             int length = System.Convert.ToInt16(flexBox.Text);
-
+            DateTime nextTime = DateTime.Now; ;
             String filter = "startNUmber=" + SeriesNumber;
             DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
+            chartX.ChartAreas[0].AxisX.ScaleView.Size = custDV.Count;
+            chartY.ChartAreas[0].AxisX.ScaleView.Size = custDV.Count;
+            chartZ.ChartAreas[0].AxisX.ScaleView.Size = custDV.Count;
             stc = "Series" + SeriesNumber.ToString();
             int i = 0;
             if (chartX.Series.FindByName(stc) == null)
             {
                 chartX.Series.Add(stc);
                 chartX.Series[stc].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.FastLine;
+
                 foreach (DataRowView catDRV in custDV)
                 {
+                    if (i == 0)
+                    {
+                        pointTime = 0;
+                        nextTime = Convert.ToDateTime(catDRV[4]);
+                    }
+                    else
+                    {
+                        pointTime = pointTime + (Convert.ToDateTime(catDRV[4]) - nextTime).TotalMilliseconds;
+                        nextTime = Convert.ToDateTime(catDRV[4]);
+                    }
                     this.chartX.Series[stc].Points.AddXY(i, System.Convert.ToSingle(Convert.ToDouble(catDRV[0])));
+                    int countPoints = custDV.Count;
+                    int devPoints = countPoints / 5;
+
+                    if (i % devPoints == 0)
+                    {
+                        chartX.ChartAreas[0].AxisX.CustomLabels.Add(i - 25, i + 25, Convert.ToString(Math.Round((pointTime / 1000), 1)), 0, LabelMarkStyle.None);
+                    }
+
                     i++;
+
                 }
             }
             if (chartY.Series.FindByName(stc) == null)
@@ -1164,9 +1256,28 @@ namespace WindowsFormsApplication3
                 i = 0;
                 foreach (DataRowView catDRV in custDV)
                 {
+                    if (i == 0)
+                    {
+                        pointTime = 0;
+                        nextTime = Convert.ToDateTime(catDRV[4]);
+                    }
+                    else
+                    {
+                        pointTime = pointTime + (Convert.ToDateTime(catDRV[4]) - nextTime).TotalMilliseconds;
+                        nextTime = Convert.ToDateTime(catDRV[4]);
+                    }
                     this.chartY.Series[stc].Points.AddXY(i, System.Convert.ToSingle(Convert.ToDouble(catDRV[1])));
+                    int countPoints = custDV.Count;
+                    int devPoints = countPoints / 5;
+
+                    if (i % devPoints == 0)
+                    {
+                        chartY.ChartAreas[0].AxisX.CustomLabels.Add(i - 25, i + 25, Convert.ToString(Math.Round((pointTime / 1000), 1)), 0, LabelMarkStyle.None);
+                    }
+
                     i++;
                 }
+
             }
             if (chartZ.Series.FindByName(stc) == null)
             {
@@ -1175,7 +1286,24 @@ namespace WindowsFormsApplication3
                 i = 0;
                 foreach (DataRowView catDRV in custDV)
                 {
+                    if (i == 0)
+                    {
+                        pointTime = 0;
+                        nextTime = Convert.ToDateTime(catDRV[4]);
+                    }
+                    else
+                    {
+                        pointTime = pointTime + (Convert.ToDateTime(catDRV[4]) - nextTime).TotalMilliseconds;
+                        nextTime = Convert.ToDateTime(catDRV[4]);
+                    }
                     this.chartZ.Series[stc].Points.AddXY(i, System.Convert.ToSingle(Convert.ToDouble(catDRV[2])));
+                    int countPoints = custDV.Count;
+                    int devPoints = countPoints / 5;
+
+                    if (i % devPoints == 0)
+                    {
+                        chartZ.ChartAreas[0].AxisX.CustomLabels.Add(i - 25, i + 25, Convert.ToString(Math.Round((pointTime / 1000), 1)), 0, LabelMarkStyle.None);
+                    }
                     i++;
                 }
             }
@@ -1207,7 +1335,6 @@ namespace WindowsFormsApplication3
             this.chartX.ChartAreas[0].AxisY.Maximum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[9].Value) + 0.1;
             this.chartX.ChartAreas[0].AxisY.Minimum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[10].Value) - 0.1;
             this.chartX.ChartAreas[0].AxisY.MaximumAutoSize = 8;
-
             this.chartY.ChartAreas[0].AxisY.Maximum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[12].Value) + 0.1;
             this.chartY.ChartAreas[0].AxisY.Minimum = Convert.ToSingle(dataGrid.Rows[SeriesNumber - 1].Cells[13].Value) - 0.1;
             this.chartY.ChartAreas[0].AxisY.MaximumAutoSize = 8;
@@ -1236,6 +1363,7 @@ namespace WindowsFormsApplication3
 
         private void openXMLDialog_FileOk(object sender, CancelEventArgs e)
         {
+            DataSetValues.Clear();
             DataSetValues.ReadXml(openXMLDialog.FileName);
             LoadAllSeries();
             colorsForGrid();
@@ -1262,7 +1390,7 @@ namespace WindowsFormsApplication3
                     this.chartZ.Series.RemoveAt(3);
                 }
                 paintSeries(e.RowIndex + 1);
-                if(dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value != null && dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value != null)
+                if (dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value != null && dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value != null)
                 {
                     chartX.ChartAreas[0].CursorX.SelectionStart = Convert.ToDouble(dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value);
                     chartX.ChartAreas[0].CursorX.SelectionEnd = Convert.ToDouble(dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value);
@@ -1279,9 +1407,9 @@ namespace WindowsFormsApplication3
                     chartY.ChartAreas[0].CursorX.SelectionStart = 0;
                     chartZ.ChartAreas[0].CursorX.SelectionEnd = 0;
                     chartZ.ChartAreas[0].CursorX.SelectionStart = 0;
-                    
+
                 }
-                
+
             }
         }
 
@@ -1317,15 +1445,16 @@ namespace WindowsFormsApplication3
             if (custDV.Count > 0)
             {
                 CSV = ToCSV(DataSetValues.Tables["AllValues"]);
-                try {
+                try
+                {
                     File.WriteAllText(saveAsCSVDialog.FileName, CSV.ToString(), Encoding.Default);
                 }
-                catch(Exception e1)
+                catch (Exception e1)
                 {
-                    MessageBox.Show("Error write CSV file. "+ e1.ToString());
+                    MessageBox.Show("Error write CSV file. " + e1.ToString());
                 }
             }
-            
+
         }
 
         private void comBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -1338,21 +1467,24 @@ namespace WindowsFormsApplication3
             double t = 0;
             double startPoint = this.chartX.ChartAreas[0].CursorX.SelectionStart;
             double stopPoint = this.chartX.ChartAreas[0].CursorX.SelectionEnd;
-            if(stopPoint < startPoint)
+            if (startPoint != stopPoint)
             {
-                t = startPoint;
-                startPoint = stopPoint;
-                stopPoint = t;
+                if (stopPoint < startPoint)
+                {
+                    t = startPoint;
+                    startPoint = stopPoint;
+                    stopPoint = t;
 
+                }
+                this.chartY.ChartAreas[0].CursorX.SelectionStart = startPoint;
+                this.chartY.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
+                this.chartZ.ChartAreas[0].CursorX.SelectionStart = startPoint;
+                this.chartZ.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
+                calculateSelection(startPoint, stopPoint, stc);
+                colorsForGrid();
+                dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value = startPoint;
+                dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value = stopPoint;
             }
-            this.chartY.ChartAreas[0].CursorX.SelectionStart = startPoint;
-            this.chartY.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
-            this.chartZ.ChartAreas[0].CursorX.SelectionStart = startPoint;
-            this.chartZ.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
-            calculateSelection(startPoint, stopPoint, stc);
-            colorsForGrid();
-            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value = startPoint;
-            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value = stopPoint;
         }
 
 
@@ -1375,12 +1507,12 @@ namespace WindowsFormsApplication3
             int counter = custDV.Count;
             foreach (DataRowView catDRV in custDV)
             {
-                double X =Convert.ToDouble(catDRV[0]);
-                double Y =Convert.ToDouble(catDRV[1]);
-                double Z =Convert.ToDouble(catDRV[2]);
-                sumx = sumx + X*X;
-                sumy = sumy + Y*Y;
-                sumz = sumz + Z*Z;
+                double X = Convert.ToDouble(catDRV[0]);
+                double Y = Convert.ToDouble(catDRV[1]);
+                double Z = Convert.ToDouble(catDRV[2]);
+                sumx = sumx + X * X;
+                sumy = sumy + Y * Y;
+                sumz = sumz + Z * Z;
                 if (X > maxX)
                 { maxX = X; }
                 if (X < minX)
@@ -1404,15 +1536,107 @@ namespace WindowsFormsApplication3
             skzX = Math.Sqrt(sumx / counter);
             skzY = Math.Sqrt(sumy / counter);
             skzZ = Math.Sqrt(sumz / counter);
-            //ataGrid.SelectedRows[0].Index;
-            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[21].Value = Math.Round(skzX,2)*10;
-            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[22].Value = Math.Round(skzY,2) * 10;
-            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[23].Value = Math.Round(skzZ,2) * 10;
-            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[18].Value = (Math.Round(maxX -minX,2)) * 10;
+            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[21].Value = Math.Round(skzX, 2) * 10;
+            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[22].Value = Math.Round(skzY, 2) * 10;
+            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[23].Value = Math.Round(skzZ, 2) * 10;
+            dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[18].Value = (Math.Round(maxX - minX, 2)) * 10;
             dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[19].Value = (Math.Round(maxY - minY, 2)) * 10;
             dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[20].Value = (Math.Round(maxZ - minZ, 2)) * 10;
 
         }
+
+        private void chartY_SelectionRangeChanged(object sender, CursorEventArgs e)
+        {
+            double t = 0;
+            double startPoint = this.chartY.ChartAreas[0].CursorX.SelectionStart;
+            double stopPoint = this.chartY.ChartAreas[0].CursorX.SelectionEnd;
+            if (startPoint != stopPoint)
+            {
+                if (stopPoint < startPoint)
+                {
+                    t = startPoint;
+                    startPoint = stopPoint;
+                    stopPoint = t;
+
+                }
+                this.chartX.ChartAreas[0].CursorX.SelectionStart = startPoint;
+                this.chartX.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
+                this.chartZ.ChartAreas[0].CursorX.SelectionStart = startPoint;
+                this.chartZ.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
+                calculateSelection(startPoint, stopPoint, stc);
+                colorsForGrid();
+                dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value = startPoint;
+                dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value = stopPoint;
+            }
+        }
+
+        private void chartZ_SelectionRangeChanged(object sender, CursorEventArgs e)
+        {
+            double t = 0;
+            double startPoint = this.chartZ.ChartAreas[0].CursorX.SelectionStart;
+            double stopPoint = this.chartZ.ChartAreas[0].CursorX.SelectionEnd;
+            if (startPoint != stopPoint)
+            {
+                if (stopPoint < startPoint)
+                {
+                    t = startPoint;
+                    startPoint = stopPoint;
+                    stopPoint = t;
+
+                }
+                this.chartX.ChartAreas[0].CursorX.SelectionStart = startPoint;
+                this.chartX.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
+                this.chartY.ChartAreas[0].CursorX.SelectionStart = startPoint;
+                this.chartY.ChartAreas[0].CursorX.SelectionEnd = stopPoint;
+                calculateSelection(startPoint, stopPoint, stc);
+                colorsForGrid();
+                dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value = startPoint;
+                dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value = stopPoint;
+            }
+        }
+
+        private void chartX_SelectionRangeChanging(object sender, CursorEventArgs e)
+        {
+            selectionChanging(e);
+        }
+
+        private void chartX_CursorPositionChanging(object sender, CursorEventArgs e)
+        {
+            
+        }
+
+        private void chartY_SelectionRangeChanging(object sender, CursorEventArgs e)
+        {
+            selectionChanging(e);
+        }
+
+        private void selectionChanging(CursorEventArgs e)
+        {
+            double startPoint = e.NewSelectionStart;
+            double stopPoint = e.NewSelectionEnd;
+            //String filter = "SeriesNumber='" + stc + "'";
+            String filter = "SeriesNumber='" + stc + "' and Number =" + startPoint;// + " and number =" + stopPoint;
+            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
+            String selectionString = "";
+            selectionString = custDV[0][4].ToString();
+            filter = "SeriesNumber='" + stc + "' and Number =" + stopPoint;
+            custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
+            selectionString = selectionString + "-" + custDV[0][4].ToString();
+            //  chartX.Titles.Insert(0, new Title(selectionString));
+            if (chartX.Titles.Count == 0)
+            {
+                chartX.Titles.Add(selectionString);
+                chartY.Titles.Add(selectionString);
+                chartZ.Titles.Add(selectionString);
+            }
+            else
+            {
+                chartX.Titles[0].Text = selectionString;
+                chartY.Titles[0].Text = selectionString;
+                chartZ.Titles[0].Text = selectionString;
+            }
+        }
+
     }
     public class ProgramSetting
     {

@@ -31,37 +31,61 @@
             this.components = new System.ComponentModel.Container();
             System.Data.DataColumn startNumber;
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea25 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend25 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series49 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title13 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea26 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend26 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series50 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title14 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea27 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend27 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series51 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title15 = new System.Windows.Forms.DataVisualization.Charting.Title();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea28 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend28 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series52 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series53 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series54 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea29 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend29 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series55 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series56 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series57 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea30 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend30 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series58 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series59 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Series series60 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title3 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series5 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series7 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series8 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series9 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.CustomLabel customLabel1 = new System.Windows.Forms.DataVisualization.Charting.CustomLabel();
+            System.Windows.Forms.DataVisualization.Charting.Series series10 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series11 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series12 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.startButton = new System.Windows.Forms.Button();
             this.stopButton = new System.Windows.Forms.Button();
             this.closeButton = new System.Windows.Forms.Button();
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Serial = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxFlexX = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxFlexY = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MaxFlexZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minXValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.maxXValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.minZValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.midZValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XPeakToPeakSelectionX10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YPeakToPeakSelectionX10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZPeakToPeakSelectionX10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.XRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.YRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ZRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SelectedStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SelectedEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.chartModX = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartModY = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.chartModZ = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -118,32 +142,6 @@
             this.saveAsCSVDialog = new System.Windows.Forms.SaveFileDialog();
             this.openXMLDialog = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Serial = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.YModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZModMax = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxFlexX = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxFlexY = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MaxFlexZ = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minXValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midYValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.maxXValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.minZValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.midZValue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XPeakToPeakSelectionX10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.YPeakToPeakSelectionX10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZPeakToPeakSelectionX10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.XRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.YRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ZRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelectedStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.SelectedEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
             startNumber = new System.Data.DataColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chartModX)).BeginInit();
@@ -226,61 +224,197 @@
             this.dataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_CellMouseClick);
             // 
+            // Time
+            // 
+            this.Time.FillWeight = 150F;
+            resources.ApplyResources(this.Time, "Time");
+            this.Time.Name = "Time";
+            // 
+            // Serial
+            // 
+            resources.ApplyResources(this.Serial, "Serial");
+            this.Serial.Name = "Serial";
+            // 
+            // Number
+            // 
+            resources.ApplyResources(this.Number, "Number");
+            this.Number.Name = "Number";
+            // 
+            // XModMax
+            // 
+            resources.ApplyResources(this.XModMax, "XModMax");
+            this.XModMax.Name = "XModMax";
+            // 
+            // YModMax
+            // 
+            resources.ApplyResources(this.YModMax, "YModMax");
+            this.YModMax.Name = "YModMax";
+            // 
+            // ZModMax
+            // 
+            resources.ApplyResources(this.ZModMax, "ZModMax");
+            this.ZModMax.Name = "ZModMax";
+            // 
+            // MaxFlexX
+            // 
+            resources.ApplyResources(this.MaxFlexX, "MaxFlexX");
+            this.MaxFlexX.Name = "MaxFlexX";
+            // 
+            // MaxFlexY
+            // 
+            resources.ApplyResources(this.MaxFlexY, "MaxFlexY");
+            this.MaxFlexY.Name = "MaxFlexY";
+            // 
+            // MaxFlexZ
+            // 
+            resources.ApplyResources(this.MaxFlexZ, "MaxFlexZ");
+            this.MaxFlexZ.Name = "MaxFlexZ";
+            // 
+            // maxValue
+            // 
+            resources.ApplyResources(this.maxValue, "maxValue");
+            this.maxValue.Name = "maxValue";
+            // 
+            // minXValue
+            // 
+            resources.ApplyResources(this.minXValue, "minXValue");
+            this.minXValue.Name = "minXValue";
+            // 
+            // midValue
+            // 
+            resources.ApplyResources(this.midValue, "midValue");
+            this.midValue.Name = "midValue";
+            // 
+            // maxYValue
+            // 
+            resources.ApplyResources(this.maxYValue, "maxYValue");
+            this.maxYValue.Name = "maxYValue";
+            // 
+            // minYValue
+            // 
+            resources.ApplyResources(this.minYValue, "minYValue");
+            this.minYValue.Name = "minYValue";
+            // 
+            // midYValue
+            // 
+            resources.ApplyResources(this.midYValue, "midYValue");
+            this.midYValue.Name = "midYValue";
+            // 
+            // maxXValue
+            // 
+            resources.ApplyResources(this.maxXValue, "maxXValue");
+            this.maxXValue.Name = "maxXValue";
+            // 
+            // minZValue
+            // 
+            resources.ApplyResources(this.minZValue, "minZValue");
+            this.minZValue.Name = "minZValue";
+            // 
+            // midZValue
+            // 
+            resources.ApplyResources(this.midZValue, "midZValue");
+            this.midZValue.Name = "midZValue";
+            // 
+            // XPeakToPeakSelectionX10
+            // 
+            resources.ApplyResources(this.XPeakToPeakSelectionX10, "XPeakToPeakSelectionX10");
+            this.XPeakToPeakSelectionX10.Name = "XPeakToPeakSelectionX10";
+            // 
+            // YPeakToPeakSelectionX10
+            // 
+            resources.ApplyResources(this.YPeakToPeakSelectionX10, "YPeakToPeakSelectionX10");
+            this.YPeakToPeakSelectionX10.Name = "YPeakToPeakSelectionX10";
+            // 
+            // ZPeakToPeakSelectionX10
+            // 
+            resources.ApplyResources(this.ZPeakToPeakSelectionX10, "ZPeakToPeakSelectionX10");
+            this.ZPeakToPeakSelectionX10.Name = "ZPeakToPeakSelectionX10";
+            // 
+            // XRMS
+            // 
+            resources.ApplyResources(this.XRMS, "XRMS");
+            this.XRMS.Name = "XRMS";
+            // 
+            // YRMS
+            // 
+            resources.ApplyResources(this.YRMS, "YRMS");
+            this.YRMS.Name = "YRMS";
+            // 
+            // ZRMS
+            // 
+            resources.ApplyResources(this.ZRMS, "ZRMS");
+            this.ZRMS.Name = "ZRMS";
+            // 
+            // SelectedStart
+            // 
+            resources.ApplyResources(this.SelectedStart, "SelectedStart");
+            this.SelectedStart.Name = "SelectedStart";
+            // 
+            // SelectedEnd
+            // 
+            resources.ApplyResources(this.SelectedEnd, "SelectedEnd");
+            this.SelectedEnd.Name = "SelectedEnd";
+            // 
             // chartModX
             // 
             this.chartModX.BorderlineColor = System.Drawing.Color.Gray;
             this.chartModX.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea25.Name = "ChartArea1";
-            this.chartModX.ChartAreas.Add(chartArea25);
+            chartArea1.InnerPlotPosition.Auto = false;
+            chartArea1.InnerPlotPosition.Height = 69F;
+            chartArea1.InnerPlotPosition.Width = 81.13209F;
+            chartArea1.InnerPlotPosition.X = 16.1764F;
+            chartArea1.InnerPlotPosition.Y = 9.1862F;
+            chartArea1.Name = "ChartArea1";
+            this.chartModX.ChartAreas.Add(chartArea1);
             resources.ApplyResources(this.chartModX, "chartModX");
-            legend25.Name = "Legend1";
-            this.chartModX.Legends.Add(legend25);
+            legend1.Name = "Legend1";
+            this.chartModX.Legends.Add(legend1);
             this.chartModX.Name = "chartModX";
-            series49.ChartArea = "ChartArea1";
-            series49.IsVisibleInLegend = false;
-            series49.Legend = "Legend1";
-            series49.Name = "Series1";
-            this.chartModX.Series.Add(series49);
-            title13.Name = "Title1";
-            this.chartModX.Titles.Add(title13);
+            series1.ChartArea = "ChartArea1";
+            series1.IsVisibleInLegend = false;
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chartModX.Series.Add(series1);
+            title1.Name = "Title1";
+            this.chartModX.Titles.Add(title1);
             this.chartModX.Click += new System.EventHandler(this.chart1_Click);
             // 
             // chartModY
             // 
             this.chartModY.BorderlineColor = System.Drawing.Color.Gray;
             this.chartModY.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea26.Name = "ChartArea1";
-            this.chartModY.ChartAreas.Add(chartArea26);
+            chartArea2.Name = "ChartArea1";
+            this.chartModY.ChartAreas.Add(chartArea2);
             resources.ApplyResources(this.chartModY, "chartModY");
-            legend26.Name = "Legend1";
-            this.chartModY.Legends.Add(legend26);
+            legend2.Name = "Legend1";
+            this.chartModY.Legends.Add(legend2);
             this.chartModY.Name = "chartModY";
-            series50.ChartArea = "ChartArea1";
-            series50.IsVisibleInLegend = false;
-            series50.Legend = "Legend1";
-            series50.Name = "Series1";
-            this.chartModY.Series.Add(series50);
-            title14.Name = "Title1";
-            this.chartModY.Titles.Add(title14);
+            series2.ChartArea = "ChartArea1";
+            series2.IsVisibleInLegend = false;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chartModY.Series.Add(series2);
+            title2.Name = "Title1";
+            this.chartModY.Titles.Add(title2);
             this.chartModY.Click += new System.EventHandler(this.chart2_Click);
             // 
             // chartModZ
             // 
             this.chartModZ.BorderlineColor = System.Drawing.Color.Gray;
             this.chartModZ.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea27.Name = "ChartArea1";
-            this.chartModZ.ChartAreas.Add(chartArea27);
+            chartArea3.Name = "ChartArea1";
+            this.chartModZ.ChartAreas.Add(chartArea3);
             resources.ApplyResources(this.chartModZ, "chartModZ");
-            legend27.Name = "Legend1";
-            this.chartModZ.Legends.Add(legend27);
+            legend3.Name = "Legend1";
+            this.chartModZ.Legends.Add(legend3);
             this.chartModZ.Name = "chartModZ";
-            series51.ChartArea = "ChartArea1";
-            series51.IsVisibleInLegend = false;
-            series51.Legend = "Legend1";
-            series51.Name = "Series1";
-            this.chartModZ.Series.Add(series51);
-            title15.Name = "Title1";
-            this.chartModZ.Titles.Add(title15);
+            series3.ChartArea = "ChartArea1";
+            series3.IsVisibleInLegend = false;
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chartModZ.Series.Add(series3);
+            title3.Name = "Title1";
+            this.chartModZ.Titles.Add(title3);
             // 
             // DataSetValues
             // 
@@ -333,123 +467,137 @@
             // 
             this.chartY.BorderlineColor = System.Drawing.Color.Gray;
             this.chartY.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea28.BackColor = System.Drawing.Color.Black;
-            chartArea28.BackSecondaryColor = System.Drawing.Color.Black;
-            chartArea28.Name = "ChartArea1";
-            this.chartY.ChartAreas.Add(chartArea28);
+            chartArea4.AxisX.IsLabelAutoFit = false;
+            chartArea4.AxisX.LabelAutoFitMaxFontSize = 8;
+            chartArea4.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea4.AxisX.ScaleView.Zoomable = false;
+            chartArea4.AxisX.Title = "Time(ss)";
+            chartArea4.AxisY.IsStartedFromZero = false;
+            chartArea4.BackColor = System.Drawing.Color.Black;
+            chartArea4.BackSecondaryColor = System.Drawing.Color.Black;
+            chartArea4.CursorX.IsUserSelectionEnabled = true;
+            chartArea4.Name = "ChartArea1";
+            this.chartY.ChartAreas.Add(chartArea4);
             this.chartY.DataSource = this.DataSetValues;
             resources.ApplyResources(this.chartY, "chartY");
-            legend28.Name = "Legend1";
-            this.chartY.Legends.Add(legend28);
             this.chartY.Name = "chartY";
-            series52.ChartArea = "ChartArea1";
-            series52.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series52.Color = System.Drawing.Color.Red;
-            series52.Legend = "Legend1";
-            series52.LegendText = "Y Max Value";
-            series52.MarkerBorderColor = System.Drawing.Color.Red;
-            series52.MarkerColor = System.Drawing.Color.Red;
-            series52.Name = "SeriesYMax";
-            series53.ChartArea = "ChartArea1";
-            series53.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series53.Color = System.Drawing.Color.Red;
-            series53.Legend = "Legend1";
-            series53.LegendText = "Y Min Value";
-            series53.Name = "SeriesYMin";
-            series54.BorderWidth = 2;
-            series54.ChartArea = "ChartArea1";
-            series54.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series54.Color = System.Drawing.Color.Fuchsia;
-            series54.Legend = "Legend1";
-            series54.LegendText = "Mid Y";
-            series54.Name = "SeriesYMid";
-            this.chartY.Series.Add(series52);
-            this.chartY.Series.Add(series53);
-            this.chartY.Series.Add(series54);
+            series4.ChartArea = "ChartArea1";
+            series4.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series4.Color = System.Drawing.Color.Red;
+            series4.LegendText = "Y Max Value";
+            series4.MarkerBorderColor = System.Drawing.Color.Red;
+            series4.MarkerColor = System.Drawing.Color.Red;
+            series4.Name = "SeriesYMax";
+            series5.ChartArea = "ChartArea1";
+            series5.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series5.Color = System.Drawing.Color.Red;
+            series5.LegendText = "Y Min Value";
+            series5.Name = "SeriesYMin";
+            series6.BorderWidth = 2;
+            series6.ChartArea = "ChartArea1";
+            series6.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series6.Color = System.Drawing.Color.Fuchsia;
+            series6.LegendText = "Mid Y";
+            series6.Name = "SeriesYMid";
+            this.chartY.Series.Add(series4);
+            this.chartY.Series.Add(series5);
+            this.chartY.Series.Add(series6);
+            this.chartY.SelectionRangeChanging += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartY_SelectionRangeChanging);
+            this.chartY.SelectionRangeChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartY_SelectionRangeChanged);
             // 
             // chartZ
             // 
             this.chartZ.BorderlineColor = System.Drawing.Color.Gray;
             this.chartZ.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea29.BackColor = System.Drawing.Color.Black;
-            chartArea29.Name = "ChartArea1";
-            this.chartZ.ChartAreas.Add(chartArea29);
+            chartArea5.AxisX.IsLabelAutoFit = false;
+            chartArea5.AxisX.LabelAutoFitMaxFontSize = 8;
+            chartArea5.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea5.AxisX.ScaleView.Zoomable = false;
+            chartArea5.AxisY.IsStartedFromZero = false;
+            chartArea5.BackColor = System.Drawing.Color.Black;
+            chartArea5.CursorX.IsUserSelectionEnabled = true;
+            chartArea5.Name = "ChartArea1";
+            this.chartZ.ChartAreas.Add(chartArea5);
             this.chartZ.DataSource = this.DataSetValues;
             resources.ApplyResources(this.chartZ, "chartZ");
-            legend29.Name = "Legend1";
-            this.chartZ.Legends.Add(legend29);
             this.chartZ.Name = "chartZ";
-            series55.ChartArea = "ChartArea1";
-            series55.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series55.Color = System.Drawing.Color.Red;
-            series55.Legend = "Legend1";
-            series55.LegendText = "Z Max Value";
-            series55.MarkerBorderColor = System.Drawing.Color.Red;
-            series55.MarkerColor = System.Drawing.Color.Red;
-            series55.Name = "SeriesZMax";
-            series56.ChartArea = "ChartArea1";
-            series56.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series56.Color = System.Drawing.Color.Red;
-            series56.Legend = "Legend1";
-            series56.LegendText = "Z Min Value";
-            series56.Name = "SeriesZMin";
-            series57.BorderWidth = 2;
-            series57.ChartArea = "ChartArea1";
-            series57.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series57.Color = System.Drawing.Color.Fuchsia;
-            series57.Legend = "Legend1";
-            series57.LegendText = "Mid Z";
-            series57.Name = "SeriesZMid";
-            this.chartZ.Series.Add(series55);
-            this.chartZ.Series.Add(series56);
-            this.chartZ.Series.Add(series57);
+            series7.ChartArea = "ChartArea1";
+            series7.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series7.Color = System.Drawing.Color.Red;
+            series7.LegendText = "Z Max Value";
+            series7.MarkerBorderColor = System.Drawing.Color.Red;
+            series7.MarkerColor = System.Drawing.Color.Red;
+            series7.Name = "SeriesZMax";
+            series8.ChartArea = "ChartArea1";
+            series8.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series8.Color = System.Drawing.Color.Red;
+            series8.LegendText = "Z Min Value";
+            series8.Name = "SeriesZMin";
+            series9.BorderWidth = 2;
+            series9.ChartArea = "ChartArea1";
+            series9.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series9.Color = System.Drawing.Color.Fuchsia;
+            series9.LegendText = "Mid Z";
+            series9.Name = "SeriesZMid";
+            this.chartZ.Series.Add(series7);
+            this.chartZ.Series.Add(series8);
+            this.chartZ.Series.Add(series9);
+            this.chartZ.SelectionRangeChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartZ_SelectionRangeChanged);
             // 
             // chartX
             // 
             this.chartX.BorderlineColor = System.Drawing.Color.DimGray;
             this.chartX.BorderlineDashStyle = System.Windows.Forms.DataVisualization.Charting.ChartDashStyle.Solid;
-            chartArea30.AxisX.ScaleView.Zoomable = false;
-            chartArea30.AxisX.ScrollBar.BackColor = System.Drawing.Color.White;
-            chartArea30.AxisX.ScrollBar.ButtonColor = System.Drawing.Color.Gray;
-            chartArea30.AxisY.MajorTickMark.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea30.AxisY.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
-            chartArea30.BackColor = System.Drawing.Color.Black;
-            chartArea30.CursorX.IsUserEnabled = true;
-            chartArea30.CursorX.IsUserSelectionEnabled = true;
-            chartArea30.Name = "ChartArea1";
-            this.chartX.ChartAreas.Add(chartArea30);
+            chartArea6.AxisX.IsLabelAutoFit = false;
+            chartArea6.AxisX.LabelAutoFitMaxFontSize = 8;
+            chartArea6.AxisX.LabelStyle.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Auto;
+            chartArea6.AxisX.ScaleView.Size = 300D;
+            chartArea6.AxisX.ScaleView.Zoomable = false;
+            chartArea6.AxisX.ScrollBar.BackColor = System.Drawing.Color.White;
+            chartArea6.AxisX.ScrollBar.ButtonColor = System.Drawing.Color.Gray;
+            chartArea6.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea6.AxisX.Title = "Time( ss)";
+            chartArea6.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea6.AxisX.TitleFont = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            customLabel1.MarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            customLabel1.Text = "1";
+            chartArea6.AxisX2.CustomLabels.Add(customLabel1);
+            chartArea6.AxisY.IsStartedFromZero = false;
+            chartArea6.AxisY.MajorTickMark.IntervalOffsetType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea6.AxisY.MajorTickMark.IntervalType = System.Windows.Forms.DataVisualization.Charting.DateTimeIntervalType.Number;
+            chartArea6.BackColor = System.Drawing.Color.Black;
+            chartArea6.CursorX.IsUserSelectionEnabled = true;
+            chartArea6.Name = "ChartArea1";
+            this.chartX.ChartAreas.Add(chartArea6);
             this.chartX.DataSource = this.DataSetValues;
             resources.ApplyResources(this.chartX, "chartX");
-            legend30.Name = "Legend1";
-            this.chartX.Legends.Add(legend30);
             this.chartX.Name = "chartX";
-            series58.ChartArea = "ChartArea1";
-            series58.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series58.Color = System.Drawing.Color.Red;
-            series58.Legend = "Legend1";
-            series58.LegendText = "X Max Value";
-            series58.MarkerBorderColor = System.Drawing.Color.Red;
-            series58.MarkerColor = System.Drawing.Color.Red;
-            series58.Name = "SeriesXMax";
-            series58.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
-            series59.ChartArea = "ChartArea1";
-            series59.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series59.Color = System.Drawing.Color.Red;
-            series59.Legend = "Legend1";
-            series59.LegendText = "X Min Value";
-            series59.Name = "SeriesXMin";
-            series59.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
-            series60.BorderWidth = 2;
-            series60.ChartArea = "ChartArea1";
-            series60.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series60.Color = System.Drawing.Color.Fuchsia;
-            series60.Legend = "Legend1";
-            series60.LegendText = "Mid X";
-            series60.Name = "SeriesXMid";
-            series60.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
-            this.chartX.Series.Add(series58);
-            this.chartX.Series.Add(series59);
-            this.chartX.Series.Add(series60);
+            series10.ChartArea = "ChartArea1";
+            series10.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series10.Color = System.Drawing.Color.Red;
+            series10.LegendText = "X Max Value";
+            series10.MarkerBorderColor = System.Drawing.Color.Red;
+            series10.MarkerColor = System.Drawing.Color.Red;
+            series10.Name = "SeriesXMax";
+            series10.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            series11.ChartArea = "ChartArea1";
+            series11.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series11.Color = System.Drawing.Color.Red;
+            series11.LegendText = "X Min Value";
+            series11.Name = "SeriesXMin";
+            series11.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            series12.BorderWidth = 2;
+            series12.ChartArea = "ChartArea1";
+            series12.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series12.Color = System.Drawing.Color.Fuchsia;
+            series12.LegendText = "Mid X";
+            series12.Name = "SeriesXMid";
+            series12.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.Single;
+            this.chartX.Series.Add(series10);
+            this.chartX.Series.Add(series11);
+            this.chartX.Series.Add(series12);
+            this.chartX.CursorPositionChanging += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartX_CursorPositionChanging);
+            this.chartX.SelectionRangeChanging += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartX_SelectionRangeChanging);
             this.chartX.SelectionRangeChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartX_SelectionRangeChanged);
             this.chartX.AxisViewChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.ViewEventArgs>(this.chartX_AxisViewChanged);
             // 
@@ -731,137 +879,6 @@
             this.openXMLDialog.DefaultExt = "*.xml";
             resources.ApplyResources(this.openXMLDialog, "openXMLDialog");
             this.openXMLDialog.FileOk += new System.ComponentModel.CancelEventHandler(this.openXMLDialog_FileOk);
-            // 
-            // Time
-            // 
-            this.Time.FillWeight = 150F;
-            resources.ApplyResources(this.Time, "Time");
-            this.Time.Name = "Time";
-            // 
-            // Serial
-            // 
-            resources.ApplyResources(this.Serial, "Serial");
-            this.Serial.Name = "Serial";
-            // 
-            // Number
-            // 
-            resources.ApplyResources(this.Number, "Number");
-            this.Number.Name = "Number";
-            // 
-            // XModMax
-            // 
-            resources.ApplyResources(this.XModMax, "XModMax");
-            this.XModMax.Name = "XModMax";
-            // 
-            // YModMax
-            // 
-            resources.ApplyResources(this.YModMax, "YModMax");
-            this.YModMax.Name = "YModMax";
-            // 
-            // ZModMax
-            // 
-            resources.ApplyResources(this.ZModMax, "ZModMax");
-            this.ZModMax.Name = "ZModMax";
-            // 
-            // MaxFlexX
-            // 
-            resources.ApplyResources(this.MaxFlexX, "MaxFlexX");
-            this.MaxFlexX.Name = "MaxFlexX";
-            // 
-            // MaxFlexY
-            // 
-            resources.ApplyResources(this.MaxFlexY, "MaxFlexY");
-            this.MaxFlexY.Name = "MaxFlexY";
-            // 
-            // MaxFlexZ
-            // 
-            resources.ApplyResources(this.MaxFlexZ, "MaxFlexZ");
-            this.MaxFlexZ.Name = "MaxFlexZ";
-            // 
-            // maxValue
-            // 
-            resources.ApplyResources(this.maxValue, "maxValue");
-            this.maxValue.Name = "maxValue";
-            // 
-            // minXValue
-            // 
-            resources.ApplyResources(this.minXValue, "minXValue");
-            this.minXValue.Name = "minXValue";
-            // 
-            // midValue
-            // 
-            resources.ApplyResources(this.midValue, "midValue");
-            this.midValue.Name = "midValue";
-            // 
-            // maxYValue
-            // 
-            resources.ApplyResources(this.maxYValue, "maxYValue");
-            this.maxYValue.Name = "maxYValue";
-            // 
-            // minYValue
-            // 
-            resources.ApplyResources(this.minYValue, "minYValue");
-            this.minYValue.Name = "minYValue";
-            // 
-            // midYValue
-            // 
-            resources.ApplyResources(this.midYValue, "midYValue");
-            this.midYValue.Name = "midYValue";
-            // 
-            // maxXValue
-            // 
-            resources.ApplyResources(this.maxXValue, "maxXValue");
-            this.maxXValue.Name = "maxXValue";
-            // 
-            // minZValue
-            // 
-            resources.ApplyResources(this.minZValue, "minZValue");
-            this.minZValue.Name = "minZValue";
-            // 
-            // midZValue
-            // 
-            resources.ApplyResources(this.midZValue, "midZValue");
-            this.midZValue.Name = "midZValue";
-            // 
-            // XPeakToPeakSelectionX10
-            // 
-            resources.ApplyResources(this.XPeakToPeakSelectionX10, "XPeakToPeakSelectionX10");
-            this.XPeakToPeakSelectionX10.Name = "XPeakToPeakSelectionX10";
-            // 
-            // YPeakToPeakSelectionX10
-            // 
-            resources.ApplyResources(this.YPeakToPeakSelectionX10, "YPeakToPeakSelectionX10");
-            this.YPeakToPeakSelectionX10.Name = "YPeakToPeakSelectionX10";
-            // 
-            // ZPeakToPeakSelectionX10
-            // 
-            resources.ApplyResources(this.ZPeakToPeakSelectionX10, "ZPeakToPeakSelectionX10");
-            this.ZPeakToPeakSelectionX10.Name = "ZPeakToPeakSelectionX10";
-            // 
-            // XRMS
-            // 
-            resources.ApplyResources(this.XRMS, "XRMS");
-            this.XRMS.Name = "XRMS";
-            // 
-            // YRMS
-            // 
-            resources.ApplyResources(this.YRMS, "YRMS");
-            this.YRMS.Name = "YRMS";
-            // 
-            // ZRMS
-            // 
-            resources.ApplyResources(this.ZRMS, "ZRMS");
-            this.ZRMS.Name = "ZRMS";
-            // 
-            // SelectedStart
-            // 
-            resources.ApplyResources(this.SelectedStart, "SelectedStart");
-            this.SelectedStart.Name = "SelectedStart";
-            // 
-            // SelectedEnd
-            // 
-            resources.ApplyResources(this.SelectedEnd, "SelectedEnd");
-            this.SelectedEnd.Name = "SelectedEnd";
             // 
             // MainForm
             // 
