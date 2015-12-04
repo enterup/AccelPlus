@@ -262,7 +262,7 @@
     <value>Time</value>
   </data>
   <data name="Time.Width" type="System.Int32, mscorlib">
-    <value>110</value>
+    <value>55</value>
   </data>
   <metadata name="Serial.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -271,7 +271,7 @@
     <value>Series name</value>
   </data>
   <data name="Serial.Width" type="System.Int32, mscorlib">
-    <value>60</value>
+    <value>57</value>
   </data>
   <metadata name="Number.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -280,7 +280,7 @@
     <value>Number of points</value>
   </data>
   <data name="Number.Width" type="System.Int32, mscorlib">
-    <value>50</value>
+    <value>78</value>
   </data>
   <metadata name="XModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -288,17 +288,11 @@
   <data name="XModMax.HeaderText" xml:space="preserve">
     <value>X Peak to Peak (x10)</value>
   </data>
-  <data name="XModMax.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <metadata name="YModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="YModMax.HeaderText" xml:space="preserve">
     <value>Y Peak to Peak(x10)</value>
-  </data>
-  <data name="YModMax.Width" type="System.Int32, mscorlib">
-    <value>65</value>
   </data>
   <metadata name="ZModMax.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -306,17 +300,11 @@
   <data name="ZModMax.HeaderText" xml:space="preserve">
     <value>Z Peak to Peak(x10)</value>
   </data>
-  <data name="ZModMax.Width" type="System.Int32, mscorlib">
-    <value>65</value>
-  </data>
   <metadata name="MaxFlexX.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MaxFlexX.HeaderText" xml:space="preserve">
     <value>X Peak to Peak for Moving Average(x10)</value>
-  </data>
-  <data name="MaxFlexX.Width" type="System.Int32, mscorlib">
-    <value>70</value>
   </data>
   <metadata name="MaxFlexY.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -324,17 +312,11 @@
   <data name="MaxFlexY.HeaderText" xml:space="preserve">
     <value>Y Peak to Peak for Moving Average(x10)</value>
   </data>
-  <data name="MaxFlexY.Width" type="System.Int32, mscorlib">
-    <value>70</value>
-  </data>
   <metadata name="MaxFlexZ.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="MaxFlexZ.HeaderText" xml:space="preserve">
     <value>Z Peak to Peak for Moving Average(x10)</value>
-  </data>
-  <data name="MaxFlexZ.Width" type="System.Int32, mscorlib">
-    <value>70</value>
   </data>
   <metadata name="maxValue.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -423,17 +405,11 @@
   <data name="XPeakToPeakSelectionX10.HeaderText" xml:space="preserve">
     <value>X Peak To Peak Selection (X10)</value>
   </data>
-  <data name="XPeakToPeakSelectionX10.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
   <metadata name="YPeakToPeakSelectionX10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="YPeakToPeakSelectionX10.HeaderText" xml:space="preserve">
     <value>Y Peak To Peak Selection (X10)</value>
-  </data>
-  <data name="YPeakToPeakSelectionX10.Width" type="System.Int32, mscorlib">
-    <value>80</value>
   </data>
   <metadata name="ZPeakToPeakSelectionX10.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -441,17 +417,11 @@
   <data name="ZPeakToPeakSelectionX10.HeaderText" xml:space="preserve">
     <value>Z Peak To Peak Selection (X10)</value>
   </data>
-  <data name="ZPeakToPeakSelectionX10.Width" type="System.Int32, mscorlib">
-    <value>80</value>
-  </data>
   <metadata name="XRMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="XRMS.HeaderText" xml:space="preserve">
     <value>X RMS Selection (x10)</value>
-  </data>
-  <data name="XRMS.Width" type="System.Int32, mscorlib">
-    <value>60</value>
   </data>
   <metadata name="YRMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
@@ -459,17 +429,11 @@
   <data name="YRMS.HeaderText" xml:space="preserve">
     <value>Y RMS Selection (x10)</value>
   </data>
-  <data name="YRMS.Width" type="System.Int32, mscorlib">
-    <value>60</value>
-  </data>
   <metadata name="ZRMS.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
   <data name="ZRMS.HeaderText" xml:space="preserve">
     <value>Z RMS Selection (x10)</value>
-  </data>
-  <data name="ZRMS.Width" type="System.Int32, mscorlib">
-    <value>60</value>
   </data>
   <metadata name="SelectedStart.UserAddedColumn" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>

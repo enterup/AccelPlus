@@ -1601,6 +1601,11 @@ namespace WindowsFormsApplication3
         {
             Start();
         }
+
+        private void chartZ_SelectionRangeChanging(object sender, CursorEventArgs e)
+        {
+            selectionChanging(e);
+        }
     }
     //public class ProgramSetting
     //{

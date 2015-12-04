@@ -74,6 +74,20 @@
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.label1 = new System.Windows.Forms.Label();
+            this.closeButton = new System.Windows.Forms.Button();
+            this.startButton = new System.Windows.Forms.Button();
+            this.timerTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.stopButton = new System.Windows.Forms.Button();
+            this.label14 = new System.Windows.Forms.Label();
+            this.clearButton = new System.Windows.Forms.Button();
+            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
+            this.chartX = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartY = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.chartZ = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Time = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Serial = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -100,20 +114,6 @@
             this.ZRMS = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SelectedStart = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SelectedEnd = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.closeButton = new System.Windows.Forms.Button();
-            this.startButton = new System.Windows.Forms.Button();
-            this.timerTextBox = new System.Windows.Forms.MaskedTextBox();
-            this.stopButton = new System.Windows.Forms.Button();
-            this.label14 = new System.Windows.Forms.Label();
-            this.clearButton = new System.Windows.Forms.Button();
-            this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
-            this.chartX = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartY = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.chartZ = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             startNumber = new System.Data.DataColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DataSetValues)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.AllValues)).BeginInit();
@@ -365,137 +365,6 @@
             this.dataGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGrid.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGrid_CellMouseClick);
             // 
-            // Time
-            // 
-            this.Time.FillWeight = 150F;
-            resources.ApplyResources(this.Time, "Time");
-            this.Time.Name = "Time";
-            // 
-            // Serial
-            // 
-            resources.ApplyResources(this.Serial, "Serial");
-            this.Serial.Name = "Serial";
-            // 
-            // Number
-            // 
-            resources.ApplyResources(this.Number, "Number");
-            this.Number.Name = "Number";
-            // 
-            // XModMax
-            // 
-            resources.ApplyResources(this.XModMax, "XModMax");
-            this.XModMax.Name = "XModMax";
-            // 
-            // YModMax
-            // 
-            resources.ApplyResources(this.YModMax, "YModMax");
-            this.YModMax.Name = "YModMax";
-            // 
-            // ZModMax
-            // 
-            resources.ApplyResources(this.ZModMax, "ZModMax");
-            this.ZModMax.Name = "ZModMax";
-            // 
-            // MaxFlexX
-            // 
-            resources.ApplyResources(this.MaxFlexX, "MaxFlexX");
-            this.MaxFlexX.Name = "MaxFlexX";
-            // 
-            // MaxFlexY
-            // 
-            resources.ApplyResources(this.MaxFlexY, "MaxFlexY");
-            this.MaxFlexY.Name = "MaxFlexY";
-            // 
-            // MaxFlexZ
-            // 
-            resources.ApplyResources(this.MaxFlexZ, "MaxFlexZ");
-            this.MaxFlexZ.Name = "MaxFlexZ";
-            // 
-            // maxValue
-            // 
-            resources.ApplyResources(this.maxValue, "maxValue");
-            this.maxValue.Name = "maxValue";
-            // 
-            // minXValue
-            // 
-            resources.ApplyResources(this.minXValue, "minXValue");
-            this.minXValue.Name = "minXValue";
-            // 
-            // midValue
-            // 
-            resources.ApplyResources(this.midValue, "midValue");
-            this.midValue.Name = "midValue";
-            // 
-            // maxYValue
-            // 
-            resources.ApplyResources(this.maxYValue, "maxYValue");
-            this.maxYValue.Name = "maxYValue";
-            // 
-            // minYValue
-            // 
-            resources.ApplyResources(this.minYValue, "minYValue");
-            this.minYValue.Name = "minYValue";
-            // 
-            // midYValue
-            // 
-            resources.ApplyResources(this.midYValue, "midYValue");
-            this.midYValue.Name = "midYValue";
-            // 
-            // maxXValue
-            // 
-            resources.ApplyResources(this.maxXValue, "maxXValue");
-            this.maxXValue.Name = "maxXValue";
-            // 
-            // minZValue
-            // 
-            resources.ApplyResources(this.minZValue, "minZValue");
-            this.minZValue.Name = "minZValue";
-            // 
-            // midZValue
-            // 
-            resources.ApplyResources(this.midZValue, "midZValue");
-            this.midZValue.Name = "midZValue";
-            // 
-            // XPeakToPeakSelectionX10
-            // 
-            resources.ApplyResources(this.XPeakToPeakSelectionX10, "XPeakToPeakSelectionX10");
-            this.XPeakToPeakSelectionX10.Name = "XPeakToPeakSelectionX10";
-            // 
-            // YPeakToPeakSelectionX10
-            // 
-            resources.ApplyResources(this.YPeakToPeakSelectionX10, "YPeakToPeakSelectionX10");
-            this.YPeakToPeakSelectionX10.Name = "YPeakToPeakSelectionX10";
-            // 
-            // ZPeakToPeakSelectionX10
-            // 
-            resources.ApplyResources(this.ZPeakToPeakSelectionX10, "ZPeakToPeakSelectionX10");
-            this.ZPeakToPeakSelectionX10.Name = "ZPeakToPeakSelectionX10";
-            // 
-            // XRMS
-            // 
-            resources.ApplyResources(this.XRMS, "XRMS");
-            this.XRMS.Name = "XRMS";
-            // 
-            // YRMS
-            // 
-            resources.ApplyResources(this.YRMS, "YRMS");
-            this.YRMS.Name = "YRMS";
-            // 
-            // ZRMS
-            // 
-            resources.ApplyResources(this.ZRMS, "ZRMS");
-            this.ZRMS.Name = "ZRMS";
-            // 
-            // SelectedStart
-            // 
-            resources.ApplyResources(this.SelectedStart, "SelectedStart");
-            this.SelectedStart.Name = "SelectedStart";
-            // 
-            // SelectedEnd
-            // 
-            resources.ApplyResources(this.SelectedEnd, "SelectedEnd");
-            this.SelectedEnd.Name = "SelectedEnd";
-            // 
             // label1
             // 
             resources.ApplyResources(this.label1, "label1");
@@ -700,6 +569,7 @@
             this.chartZ.Series.Add(series7);
             this.chartZ.Series.Add(series8);
             this.chartZ.Series.Add(series9);
+            this.chartZ.SelectionRangeChanging += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartZ_SelectionRangeChanging);
             this.chartZ.SelectionRangeChanged += new System.EventHandler<System.Windows.Forms.DataVisualization.Charting.CursorEventArgs>(this.chartZ_SelectionRangeChanged);
             // 
             // label2
@@ -716,6 +586,151 @@
             // 
             resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
+            // 
+            // Time
+            // 
+            this.Time.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Time.FillWeight = 150F;
+            resources.ApplyResources(this.Time, "Time");
+            this.Time.Name = "Time";
+            // 
+            // Serial
+            // 
+            resources.ApplyResources(this.Serial, "Serial");
+            this.Serial.Name = "Serial";
+            // 
+            // Number
+            // 
+            this.Number.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            resources.ApplyResources(this.Number, "Number");
+            this.Number.Name = "Number";
+            // 
+            // XModMax
+            // 
+            this.XModMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.XModMax, "XModMax");
+            this.XModMax.Name = "XModMax";
+            // 
+            // YModMax
+            // 
+            this.YModMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.YModMax, "YModMax");
+            this.YModMax.Name = "YModMax";
+            // 
+            // ZModMax
+            // 
+            this.ZModMax.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ZModMax, "ZModMax");
+            this.ZModMax.Name = "ZModMax";
+            // 
+            // MaxFlexX
+            // 
+            this.MaxFlexX.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.MaxFlexX, "MaxFlexX");
+            this.MaxFlexX.Name = "MaxFlexX";
+            // 
+            // MaxFlexY
+            // 
+            this.MaxFlexY.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.MaxFlexY, "MaxFlexY");
+            this.MaxFlexY.Name = "MaxFlexY";
+            // 
+            // MaxFlexZ
+            // 
+            this.MaxFlexZ.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.MaxFlexZ, "MaxFlexZ");
+            this.MaxFlexZ.Name = "MaxFlexZ";
+            // 
+            // maxValue
+            // 
+            resources.ApplyResources(this.maxValue, "maxValue");
+            this.maxValue.Name = "maxValue";
+            // 
+            // minXValue
+            // 
+            resources.ApplyResources(this.minXValue, "minXValue");
+            this.minXValue.Name = "minXValue";
+            // 
+            // midValue
+            // 
+            resources.ApplyResources(this.midValue, "midValue");
+            this.midValue.Name = "midValue";
+            // 
+            // maxYValue
+            // 
+            resources.ApplyResources(this.maxYValue, "maxYValue");
+            this.maxYValue.Name = "maxYValue";
+            // 
+            // minYValue
+            // 
+            resources.ApplyResources(this.minYValue, "minYValue");
+            this.minYValue.Name = "minYValue";
+            // 
+            // midYValue
+            // 
+            resources.ApplyResources(this.midYValue, "midYValue");
+            this.midYValue.Name = "midYValue";
+            // 
+            // maxXValue
+            // 
+            resources.ApplyResources(this.maxXValue, "maxXValue");
+            this.maxXValue.Name = "maxXValue";
+            // 
+            // minZValue
+            // 
+            resources.ApplyResources(this.minZValue, "minZValue");
+            this.minZValue.Name = "minZValue";
+            // 
+            // midZValue
+            // 
+            resources.ApplyResources(this.midZValue, "midZValue");
+            this.midZValue.Name = "midZValue";
+            // 
+            // XPeakToPeakSelectionX10
+            // 
+            this.XPeakToPeakSelectionX10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.XPeakToPeakSelectionX10, "XPeakToPeakSelectionX10");
+            this.XPeakToPeakSelectionX10.Name = "XPeakToPeakSelectionX10";
+            // 
+            // YPeakToPeakSelectionX10
+            // 
+            this.YPeakToPeakSelectionX10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.YPeakToPeakSelectionX10, "YPeakToPeakSelectionX10");
+            this.YPeakToPeakSelectionX10.Name = "YPeakToPeakSelectionX10";
+            // 
+            // ZPeakToPeakSelectionX10
+            // 
+            this.ZPeakToPeakSelectionX10.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ZPeakToPeakSelectionX10, "ZPeakToPeakSelectionX10");
+            this.ZPeakToPeakSelectionX10.Name = "ZPeakToPeakSelectionX10";
+            // 
+            // XRMS
+            // 
+            this.XRMS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.XRMS, "XRMS");
+            this.XRMS.Name = "XRMS";
+            // 
+            // YRMS
+            // 
+            this.YRMS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.YRMS, "YRMS");
+            this.YRMS.Name = "YRMS";
+            // 
+            // ZRMS
+            // 
+            this.ZRMS.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            resources.ApplyResources(this.ZRMS, "ZRMS");
+            this.ZRMS.Name = "ZRMS";
+            // 
+            // SelectedStart
+            // 
+            resources.ApplyResources(this.SelectedStart, "SelectedStart");
+            this.SelectedStart.Name = "SelectedStart";
+            // 
+            // SelectedEnd
+            // 
+            resources.ApplyResources(this.SelectedEnd, "SelectedEnd");
+            this.SelectedEnd.Name = "SelectedEnd";
             // 
             // MainForm
             // 
