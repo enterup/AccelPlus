@@ -883,6 +883,8 @@ namespace WindowsFormsApplication3
             String filter = "startNUmber=" + seriesNumber;
             DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
             int counter = custDV.Count;
+            if(counter != 0)
+            { 
             foreach (DataRowView catDRV in custDV)
             {
                 float X = System.Convert.ToSingle(Convert.ToDouble(catDRV[0]));
@@ -1031,7 +1033,7 @@ namespace WindowsFormsApplication3
             counterX = 0;
             counterY = 0;
             counterZ = 0;
-
+            }
         }
 
         private void colorsForGrid()
@@ -1099,7 +1101,7 @@ namespace WindowsFormsApplication3
 
 
 
-        private void paintSeries(int SeriesNumber)
+        private void paintSeries(int SeriesNumber,String SeriesName)
         {
             float minX = 100;
             float minY = 100;
@@ -1119,12 +1121,14 @@ namespace WindowsFormsApplication3
             chartZ.ChartAreas[0].AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
             int length = System.Convert.ToInt16(Setting.settings.FlexInerval);
             DateTime nextTime = DateTime.Now; ;
-            String filter = "startNUmber=" + SeriesNumber;
-            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "startNumber", DataViewRowState.CurrentRows);
+           // String filter = "startNUmber=" + SeriesNumber;
+            String filter = "SeriesNumber='" + SeriesName+"'";
+            DataView custDV = new DataView(DataSetValues.Tables["AllValues"], filter, "SeriesNumber", DataViewRowState.CurrentRows);
             chartX.ChartAreas[0].AxisX.ScaleView.Size = custDV.Count;
             chartY.ChartAreas[0].AxisX.ScaleView.Size = custDV.Count;
             chartZ.ChartAreas[0].AxisX.ScaleView.Size = custDV.Count;
-            stc = "Series" + SeriesNumber.ToString();
+           // stc = "Series" + SeriesNumber.ToString();
+            stc = SeriesName;
             int i = 0;
             if (chartX.Series.FindByName(stc) == null)
             {
@@ -1307,7 +1311,8 @@ namespace WindowsFormsApplication3
                     this.chartY.Series.RemoveAt(3);
                     this.chartZ.Series.RemoveAt(3);
                 }
-                paintSeries(e.RowIndex + 1);
+                String srName = dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[1].Value.ToString();
+                paintSeries(e.RowIndex + 1,srName);
                 if (dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value != null && dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[25].Value != null)
                 {
                     chartX.ChartAreas[0].CursorX.SelectionStart = Convert.ToDouble(dataGrid.Rows[dataGrid.SelectedRows[0].Index].Cells[24].Value);
@@ -1605,6 +1610,11 @@ namespace WindowsFormsApplication3
         private void chartZ_SelectionRangeChanging(object sender, CursorEventArgs e)
         {
             selectionChanging(e);
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
     //public class ProgramSetting

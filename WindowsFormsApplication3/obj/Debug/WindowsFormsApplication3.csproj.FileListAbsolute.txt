@@ -84,4 +84,3 @@ C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\
 C:\Users\Administrator\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
 C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.csprojResolveAssemblyReference.cache
 C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.SettingsForm.resources
-C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Debug\WindowsFormsApplication3.Form2.resources

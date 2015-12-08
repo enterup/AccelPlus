@@ -6,9 +6,9 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Accel Client")]
-[assembly: AssemblyDescription("Программа написана мной для собственных нужд. Я не несу никакой ответственности за любые несчастные случаи возникшие в результате использования этой программы.  Все действия по снятию показаний вибрации вы выполняете на свой страх и риск.  С пожеланиями и критикой обращаться: enterup@gmail.com")]
+[assembly: AssemblyDescription("With your  wishes and suggestions send email: enterup@gmail.com")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Egorov Danila Inc.")]
+[assembly: AssemblyCompany("Egorov Danila")]
 [assembly: AssemblyProduct("Accel Client")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("0.0.0.1")]
-[assembly: AssemblyFileVersion("0.0.0.1")]
+[assembly: AssemblyVersion("0.0.0.9")]
+[assembly: AssemblyFileVersion("0.0.0.9")]

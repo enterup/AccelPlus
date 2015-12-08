@@ -51,3 +51,5 @@ C:\Users\Administrator\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\o
 C:\Users\Administrator\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Release\en\WindowsFormsApplication3.resources.dll
 C:\Users\Administrator\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Release\ru-RU\WindowsFormsApplication3.resources.dll
 C:\Users\Administrator\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Release\ru\WindowsFormsApplication3.resources.dll
+C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Release\WindowsFormsApplication3.SettingsForm.resources
+C:\Users\Acer\Dropbox\Repositories\AccelPlus\WindowsFormsApplication3\obj\Release\WindowsFormsApplication3.SettingsForm.ru.resources

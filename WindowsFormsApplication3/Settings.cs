@@ -99,9 +99,19 @@ namespace WindowsFormsApplication3
                         {
                             timerTextBox.Text = settings.Timer;
                         }
+                        else
+                        {
+                            timerTextBox.Text = "30";
+                            settings.Timer = "30";
+                        }
                         if (settings.FlexInerval != "")
                         {
                             flexBox.Text = settings.FlexInerval;
+                        }
+                        else
+                        {
+                            flexBox.Text = "3";
+                            settings.FlexInerval = "3";
                         }
                         if (settings.countPoint != "0")
                         {
@@ -110,6 +120,7 @@ namespace WindowsFormsApplication3
                         else
                         {
                             intervalMaskedBox.Text = "300";
+                             settings.countPoint = "300";
                         }
                     }
                 }
@@ -120,11 +131,21 @@ namespace WindowsFormsApplication3
                     portBox.Show();
                     label3.Hide();
                     boudRateBox.Text = "38400";
+                    settings.minDx = Convert.ToString(12.0 / 100.0);
+                    settings.minDy = Convert.ToString(6.0 / 100.0);
+                    settings.minDz = Convert.ToString(6.0 / 100.0);
+                    settings.Timer = "30";
+                    settings.FlexInerval = "3";
+                    settings.PortSpeed = "38400";
+                    settings.Source = "UDP";
+                    settings.UDPPort = "5555";
+                    
                     comBox.Text = "COM3";
-                    dxMaskedBox.Text = Convert.ToString(6.0 / 100.0);
+                    dxMaskedBox.Text = Convert.ToString(12.0 / 100.0);
                     dyMaskedBox.Text = Convert.ToString(6.0 / 100.0);
                     dzMaskedBox.Text = Convert.ToString(6.0 / 100.0);
                     intervalMaskedBox.Text  = "300";
+                    settings.countPoint = "300";
 
                 }
             }
